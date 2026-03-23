@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #322e2d;
+    --secondary-color: #dfdfcd;
+    --accent-color: #f67e0c;
+    --primary-color-dark: #1b1918;
+    --primary-font: url(../assets/unigeo/Unigeo128-Light-trial.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+
+} */
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    /* height: 100dvh; */
+    padding: .9rem;
+    
+}
+
+nav {
+    position: absolute;
+    top: 5.7rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 .5rem;
+    background-color: #322e2d;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    list-style: none;
+}
+
+nav > ul > li > a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.quote-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    padding: .5rem 1rem;
+}
+
+/* hero section */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100dvh - 4.5rem);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: .5rem;
+    /* height: 70%; */
+
+}
+
+.head > h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    color: white;
+}
+
+.head > p {
+    color: var(--accent-color);
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .9rem;
+    padding: .5rem;
+}
+
+.detail > h4{
+    color: var(--accent-color);
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 80%;
+}
+
+.cta > a {
+    
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    border-radius: .3rem;
+    transition: 1;
+}
+
+.cta-view {
+    background-color: var(--accent-color);
+}
+
+.cta-contact {
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.cta > a:hover {
+    scale: 1.1;
+    background-color: #8b4503;
+}
+
+
+.overview {
+    background-color: var(--secondary-color);
+}
