@@ -136,7 +136,26 @@ nav > ul > li > a {
     background-color: #8b4503;
 }
 
+/* Project section styling */
 
 .overview {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
     background-color: var(--secondary-color);
+
+}
+
+.project {
+    color: var(--accent-color);
+}
+
+.text {
+    color:rgba(50, 46, 45, 0.7);
+}
+
+.div-cont {
+    
 }
