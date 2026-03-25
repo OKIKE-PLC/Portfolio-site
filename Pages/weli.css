@@ -324,11 +324,11 @@ nav > ul > li > a {
 }
 
 
-.approach {
+.industry-approach {
     color: rgb(50 46 45 / 1);
 }
 
-.approach > p {
+.industry-approach > p {
     color: var(--accent-color);
 }
 
@@ -435,4 +435,108 @@ nav > ul > li > a {
 }
 
 /* Our Approach */
-wagwan bish
+.approach {
+    background-color: #322e2d;
+    padding: 6rem .6rem;
+}
+
+.solving {
+    margin-bottom: 2rem;
+}
+
+.solving > h5 {
+    color: var(--accent-color);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.solving > h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-align: center;
+    color: white;
+    font-family: Playfair Display, Georgia, serif;
+    font-weight: 400;
+}
+
+.solving > p {
+    color: #dfdfcdb3;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+.solving-cards {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+
+}
+
+.solving-process {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    background-color: #ffffff0d;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--primary-color-dark);
+    border-radius: .5rem;
+}
+
+.solving-process > .num {
+    color: var(--accent-color);
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.pro > h5 {
+    color: #dfdfcd80;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-size: 1.7rem;
+        margin-bottom: .25rem;
+}
+
+.pro > .sol-txt {
+    color: #dfdfcd80;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+
+.solving-process > .img {
+    background-color: #ffffff0d;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    border-radius: 50%;
+}
+
+.solving-process > .img > img {
+    width: 100%;
+    
+}
+
+.solution {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem .6rem;
+    text-align: center;
+}
+
+.sol-head  > .sol-head-txt {
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.sol-head > h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
