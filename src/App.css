@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+
+  body {
+    @apply bg-[#dfdfcd] text-[#1C1C19]  
+  }
+} 
