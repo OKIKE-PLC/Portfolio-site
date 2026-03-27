@@ -5,7 +5,7 @@ import './App.css';
 function App() {
 
   return (
-    <main className="max-w-360 mx-auto w-full">
+    <main className="mx-auto w-full">
       <Header />
       <Hero />
     </main>
