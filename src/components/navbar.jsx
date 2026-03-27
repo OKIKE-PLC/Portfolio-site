@@ -27,7 +27,7 @@ const toggleMobileMenu = () => {
             <button onClick={toggleMobileMenu} className='md:hidden text-3xl p-2 z-50'>
                 <RiMenu4Line />
             </button>
-            <div id='mobileMenu' className='mob hidden fixed top-16 md:hidden bg-opacity-70 backdrop-blur-md'>
+            <div id='mobileMenu' className='mob  hidden fixed top-11.5 md:hidden bg-opacity-70 backdrop-blur-md items-start'>
                 <nav className='flex flex-col gap-6 items-center'>
                     <a href="#" className='hover:text-orange-600 hover:underline transition duration-150'>Home</a>
                 <a href="#" className='hover:text-orange-600 hover:underline transition duration-150'>Portfolio</a>

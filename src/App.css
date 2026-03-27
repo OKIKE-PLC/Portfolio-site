@@ -13,6 +13,6 @@ body {
 @layer base {
 
   body {
-    @apply bg-[#dfdfcd] text-[#1C1C19]  
+    @apply bg-[#F5F2ED] text-[#1C1C19]  
   }
 } 

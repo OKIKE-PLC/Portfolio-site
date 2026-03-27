@@ -1,13 +1,11 @@
-import Header from "./components/header"
-import Hero from "./components/hero";
+import Home from '../pages/home';
 import './App.css';
 
 function App() {
 
   return (
     <main className="mx-auto w-full">
-      <Header />
-      <Hero />
+      <Home />
     </main>
   )
 }
