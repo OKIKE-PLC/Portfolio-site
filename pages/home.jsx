@@ -3,25 +3,26 @@ import './hero.css';
 import bgImg from '../src/assets/AMFF93_1.JPG';
 // import bgImg2 from '../src/assets/Container.png';
 // import Compass from '../src/assets/Container.svg';
+// import Laurel from '../src/assets/Laurel-3.png';
 
 export default function Home() {
     return (
         <>
             <Header />
             {/* hero section */}
-            <section className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 .5rem"} }>
+            <section className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"} }>
                 {/* hero text div */}
             <div className="content flex  flex-col justify-center items-start md:items-center text-left  md:text-center">
-                <h1 className='text-4xl md:text-6xl max-w-sm md:max-w-3xl  leading-10 md:leading-15 font-semibold m-5'>Redefining Architectural Fabrication.</h1>
+                <h1 className='text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold m-5'>Redefining Architectural Fabrication.</h1>
                 <p className="md:text-2xl max-w-sm md:max-w-3xl">Bespoke elements and construction excellence in Nigeria. We blend structural integrity with aesthetic precision to create enduring landmarks.
                 </p>
 
                 {/* hero cta btns */}
-                <div className="cta flex flex-col md:flex-row justify-center w-full items-center gap-5">
+                <div className="cta flex flex-col md:flex-row justify-center w-full items-center gap-8">
                     {/* view projects cta btn */}
-                    <a href="#" className='bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300'  style={{padding: "12px 25px", width: "100%"}}>View Projects</a>
+                    <a href="#" className='bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300 md:w-1/2'  style={{padding: "12px 25px", width: "100%"}}>View Projects</a>
                     {/* contact us btn */}
-                    <a href="#" className='text-stone-200 rounded-xl border-stone-100 border-2 hover:bg-orange-800 transition duration-300' style={{padding: "12px 32px", width: "100%"}}>Contact Us</a>
+                    <a href="#" className='text-stone-200 rounded-xl border-stone-100 border-2 hover:bg-orange-800 transition duration-300 md:w-1/2' style={{padding: "12px 32px", width: "100%"}}>Contact Us</a>
                 </div>
             </div>
             
@@ -100,19 +101,79 @@ export default function Home() {
                     <a href="#">View our works</a>
                 </div>
                 {/* selected works cards */}
-                <div>
-                    <div className="mb-5">
+                <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5" style={{padding: "1.5rem 0"}}>
+                    <div className="mb-5 w-full" style={{margin: "1.5rem 0"}}>
                         <img className="w-full" src="../src/assets/Container.png" alt="bgImg" />
                         <h4 className="text-[#1C1C19] font-bold text-xl">The Eko Monolith</h4>
                         <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
 
                     </div>
-                    <div>
+                    <div className="mb-5 w-full" style={{margin: "1.5rem 0"}}>
                         <img className="w-full" src="../src/assets/Container.png" alt="bgImg" />
-                        <h4>The Eko Monolith</h4>
-                        <p>Lagos, Nigeria 2025</p>
-
+                        <h4 className="text-[#1C1C19] font-bold text-xl">The Eko Monolith</h4>
+                        <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
                     </div>
+                </div>
+
+                
+                    
+            </section>
+
+            {/* Workprocess */}
+            <section className="process flex flex-col  justify-center items-center gap-6" style={{margin: "3rem 0"}}>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold" style={{margin: "0 0 3rem 0"}}>The Blueprint</h3>
+                        <div className="w-process grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1 justify-center items-center w-full">
+                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
+                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
+                                    <img src="../src/assets/consultation.png" alt="" />
+                                </div>
+                                
+                                <div className="process-txt">
+                                    <h4 className="font-bold text-xl">Consultation</h4>
+                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
+                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
+                                    <img src="../src/assets/consultation.png" alt="" />
+                                </div>
+                                
+                                <div className="process-txt">
+                                    <h4 className="font-bold text-xl">Consultation</h4>
+                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
+                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
+                                    <img src="../src/assets/consultation.png" alt="" />
+                                </div>
+                                
+                                <div className="process-txt">
+                                    <h4 className="font-bold text-xl">Consultation</h4>
+                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
+                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
+                                    <img src="../src/assets/consultation.png" alt="" />
+                                </div>
+                                
+                                <div className="process-txt">
+                                    <h4 className="font-bold text-xl">Consultation</h4>
+                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+
+            {/* Our legacy section */}
+            <section className="legacy">
+                <img src="../src/assets/Laurel-3.png" alt="Mrs Laurel" />
+                <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
+                    <span className="font-light text-orange-600">Our Legacy</span>
+                    <h4>Forging Tomorrow Since 1999.</h4>
+                    <p>OKIKE PLC emerged from a singular vision: to bridge the gap between architectural imagination and structural reality. We are more than fabricators; we are partners in the construction of Nigeria's future skyline.</p>
+                    <p>Every bolt we tighten and every beam we forge carries the weight of our commitment to excellence. Our facility in Lagos serves as a laboratory of innovation where raw materials are transformed into iconic elements.</p>
                 </div>
             </section>
         </>
