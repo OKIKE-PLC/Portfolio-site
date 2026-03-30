@@ -1,7 +1,6 @@
-import Header from "../src/components/header";
 import './hero.css';
-import bgImg from '../src/assets/AMFF93_1.JPG';
-import Footer from "../src/components/footer";
+import bgImg from '../assets/AMFF93_1.JPG';
+
 // import bgImg2 from '../src/assets/Container.png';
 // import Compass from '../src/assets/Container.svg';
 // import Laurel from '../src/assets/Laurel-3.png';
@@ -9,7 +8,7 @@ import Footer from "../src/components/footer";
 export default function Home() {
     return (
         <>
-            <Header />
+        
             {/* hero section */}
             <section className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"} }>
                 {/* hero text div */}
@@ -198,7 +197,7 @@ export default function Home() {
             </section>
 
             
-            <Footer />
+            
             
             
 

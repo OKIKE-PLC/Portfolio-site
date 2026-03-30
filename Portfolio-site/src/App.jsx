@@ -5,35 +5,22 @@ import Process from './pages/process';
 import Contact from './pages/contact';
 import './App.css';
 import Navbar from './components/navbar';
+import Footer from "./components/footer";
 
-function App() {
-
+export default function App() {
   return (
-    let component
-    switch (window.location.pathname) {
-      case "/":
-        component = <App />
-        break
-      case "/":
-        component = <Home />
-        break
-      case "/":
-        component = <Portfolio />
-        break
-      case "/":
-        component = <Process />
-        break
-      case "/":
-        component = <Contact />
-        break
-    }
-    return (
+  
+    <Router>
       <Navbar />
-    )
-    // <main className="mx-auto w-full">
-    //   <Home />
-    // </main>
+      <main className="mx-auto w-full">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   )
 }
-
-export default App
