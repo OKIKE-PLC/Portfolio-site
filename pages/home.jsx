@@ -167,14 +167,31 @@ export default function Home() {
             </section>
 
             {/* Our legacy section */}
-            <section className="legacy">
-                <img src="../src/assets/Laurel-3.png" alt="Mrs Laurel" />
+            <section className="legacy flex flex-col lg:flex-row gap-5">
+                <img src="../src/assets/Laurel-3.png" alt="Mrs Laurel" className="lg:w-1/2"/>
                 <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
                     <span className="font-light text-orange-600">Our Legacy</span>
-                    <h4>Forging Tomorrow Since 1999.</h4>
-                    <p>OKIKE PLC emerged from a singular vision: to bridge the gap between architectural imagination and structural reality. We are more than fabricators; we are partners in the construction of Nigeria's future skyline.</p>
-                    <p>Every bolt we tighten and every beam we forge carries the weight of our commitment to excellence. Our facility in Lagos serves as a laboratory of innovation where raw materials are transformed into iconic elements.</p>
+                    <h4 className="font-bold text-3xl md:4xl lg:6xl">Forging Tomorrow Since 1999.</h4>
+                    <p className="text-xl md:text-2xl">OKIKE PLC emerged from a singular vision: to bridge the gap between architectural imagination and structural reality. We are more than fabricators; we are partners in the construction of Nigeria's future skyline.</p>
+                    <p className="text-xl md:text-2xl">Every bolt we tighten and every beam we forge carries the weight of our commitment to excellence. Our facility in Lagos serves as a laboratory of innovation where raw materials are transformed into iconic elements.</p>
+
+                    <div className="flex flex-col lg:flex-row gap-6 w-full">
+                        <div className="w-1/2">
+                            <h5 className="text-3xl">500+</h5>
+                            <p className="text-xl">Projects Completed</p>
+                        </div>
+                        <div className="w-1/2">
+                            <h5 className="text-3xl">500+</h5>
+                            <p className="text-xl">Projects Completed</p>
+                        </div>
+                    </div>
                 </div>
+                
+            </section>
+
+            <section className="bg-orange-600 text-zinc-100 flex flex-col justify-center items-center text-center gap-5" style={{padding: "3rem"}}>
+                <h3 className="font-bold text-2xl md:3xl lg:4xl">Ready to Build Your Legacy?</h3>
+                <a href="#">Partener with Us</a>
             </section>
         </>
     )
