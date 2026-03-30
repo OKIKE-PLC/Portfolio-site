@@ -1,6 +1,7 @@
 import Header from "../src/components/header";
 import './hero.css';
 import bgImg from '../src/assets/AMFF93_1.JPG';
+import Footer from "../src/components/footer";
 // import bgImg2 from '../src/assets/Container.png';
 // import Compass from '../src/assets/Container.svg';
 // import Laurel from '../src/assets/Laurel-3.png';
@@ -177,11 +178,11 @@ export default function Home() {
 
                     <div className="flex flex-col lg:flex-row gap-6 w-full">
                         <div className="w-1/2">
-                            <h5 className="text-3xl">500+</h5>
+                            <h5 className="text-3xl font-bold">500+</h5>
                             <p className="text-xl">Projects Completed</p>
                         </div>
                         <div className="w-1/2">
-                            <h5 className="text-3xl">500+</h5>
+                            <h5 className="text-3xl font-bold">500+</h5>
                             <p className="text-xl">Projects Completed</p>
                         </div>
                     </div>
@@ -189,10 +190,18 @@ export default function Home() {
                 
             </section>
 
-            <section className="bg-orange-600 text-zinc-100 flex flex-col justify-center items-center text-center gap-5" style={{padding: "3rem"}}>
-                <h3 className="font-bold text-2xl md:3xl lg:4xl">Ready to Build Your Legacy?</h3>
-                <a href="#">Partener with Us</a>
+            <section className="bg-orange-600 text-zinc-100 flex flex-col justify-center items-center text-center gap-5" style={{padding: "3rem",
+
+            }}>
+                <h3 className="font-bold text-2xl md:4xl lg:6xl">Ready to Build Your Legacy?</h3>
+                <a href="#" className="bg-[#1C1C19] rounded-xl" style={{padding: "1rem"}}>Partener with Us</a>
             </section>
+
+            
+            <Footer />
+            
+            
+
         </>
     )
 }

@@ -1,4 +1,5 @@
 import { RiMenu4Line } from "react-icons/ri";
+import darkLogo from '../assets/Dark.png';
 
 export default function Navbar() {
 const toggleMobileMenu = () => {
@@ -14,7 +15,8 @@ const toggleMobileMenu = () => {
     return (
         
 
-        <>
+        <section className='flex justify-between items-center' style={{padding: "1rem"}}>
+        <a href="#"><img src={darkLogo} alt="Okike Logo" width={60} /></a>
             <nav className='hidden md:flex justify-center items-center gap-5 text-sm '>
                 <a href="#" className='hover:text-orange-600 hover:underline transition duration-150'>Home</a>
                 <a href="#" className='hover:text-orange-600 hover:underline transition duration-150'>Portfolio</a>
@@ -34,6 +36,6 @@ const toggleMobileMenu = () => {
                 <a href="#" className='hover:text-orange-600 hover:underline transition duration-150'>Contact</a>
                 </nav>
             </div>
-        </>
+        </section>
     )
 }
