@@ -1,9 +1,9 @@
 import './hero.css';
 import bgImg from '../assets/AMFF93_1.JPG';
-
-// import bgImg2 from '../src/assets/Container.png';
-// import Compass from '../src/assets/Container.svg';
-// import Laurel from '../src/assets/Laurel-3.png';
+import bgImg2 from '../assets/Container.png';
+import Compass from '../assets/Container.svg';
+import Laurel from '../assets/Laurel-3.png';
+import Consultation from '../assets/consultation.png'
 
 export default function Home() {
     return (
@@ -45,7 +45,7 @@ export default function Home() {
                         designed with precision engineering.
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <img src="../src/assets/Container.svg" alt="compass" />
+                            <img src={Compass} alt="compass" />
                         {/* <Compass /> */}
                         </div>
                         
@@ -57,7 +57,7 @@ export default function Home() {
                         designed with precision engineering.
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <img src="../src/assets/Container.svg" alt="compass" />
+                            <img src={Compass} alt="compass" />
                         {/* <Compass /> */}
                         </div>
                         
@@ -69,7 +69,7 @@ export default function Home() {
                         designed with precision engineering.
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <img src="../src/assets/Container.svg" alt="compass" />
+                            <img src={Compass} alt="compass" />
                         {/* <Compass /> */}
                         </div>
                         
@@ -81,7 +81,7 @@ export default function Home() {
                         designed with precision engineering.
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <img src="../src/assets/Container.svg" alt="compass" />
+                            <img src={Compass} alt="compass" />
                         {/* <Compass /> */}
                         </div>
                         
@@ -103,13 +103,13 @@ export default function Home() {
                 {/* selected works cards */}
                 <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5" style={{padding: "1.5rem 0"}}>
                     <div className="mb-5 w-full" style={{margin: "1.5rem 0"}}>
-                        <img className="w-full" src="../src/assets/Container.png" alt="bgImg" />
+                        <img className="w-full" src={bgImg2} alt="bgImg" />
                         <h4 className="text-[#1C1C19] font-bold text-xl">The Eko Monolith</h4>
                         <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
 
                     </div>
                     <div className="mb-5 w-full" style={{margin: "1.5rem 0"}}>
-                        <img className="w-full" src="../src/assets/Container.png" alt="bgImg" />
+                        <img className="w-full" src={bgImg2} alt="bgImg" />
                         <h4 className="text-[#1C1C19] font-bold text-xl">The Eko Monolith</h4>
                         <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
                     </div>
@@ -125,7 +125,7 @@ export default function Home() {
                         <div className="w-process grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1 justify-center items-center w-full">
                             <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
                                 <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src="../src/assets/consultation.png" alt="" />
+                                    <img src={Consultation} />
                                 </div>
                                 
                                 <div className="process-txt">
@@ -135,7 +135,7 @@ export default function Home() {
                             </div>
                             <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
                                 <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src="../src/assets/consultation.png" alt="" />
+                                    <img src={Consultation} />
                                 </div>
                                 
                                 <div className="process-txt">
@@ -145,7 +145,7 @@ export default function Home() {
                             </div>
                             <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
                                 <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src="../src/assets/consultation.png" alt="" />
+                                    <img src={Consultation} />
                                 </div>
                                 
                                 <div className="process-txt">
@@ -155,7 +155,7 @@ export default function Home() {
                             </div>
                             <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
                                 <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src="../src/assets/consultation.png" alt="" />
+                                    <img src={Consultation} />
                                 </div>
                                 
                                 <div className="process-txt">
@@ -168,7 +168,7 @@ export default function Home() {
 
             {/* Our legacy section */}
             <section className="legacy flex flex-col lg:flex-row gap-5">
-                <img src="../src/assets/Laurel-3.png" alt="Mrs Laurel" className="lg:w-1/2"/>
+                <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2"/>
                 <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
                     <span className="font-light text-orange-600">Our Legacy</span>
                     <h4 className="font-bold text-3xl md:4xl lg:6xl">Forging Tomorrow Since 1999.</h4>
