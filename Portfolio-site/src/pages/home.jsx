@@ -18,7 +18,7 @@ export default function Home() {
                 </p>
 
                 {/* hero cta btns */}
-                <div className="cta flex flex-col md:flex-row justify-center w-full items-center gap-8">
+                <div className="cta flex flex-col md:flex-row justify-center w-full items-center gap-3">
                     {/* view projects cta btn */}
                     <a href="#" className='bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300 md:w-1/2'  style={{padding: "12px 25px", width: "100%"}}>View Projects</a>
                     {/* contact us btn */}

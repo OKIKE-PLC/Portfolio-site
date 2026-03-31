@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import darkLogo from '../assets/Dark.png';
 
 export default function Footer() {
@@ -10,10 +11,10 @@ export default function Footer() {
         <div className='flex flex-col gap-3 justify-center items-start'>
             <span className='text-orange-600'>Explore</span>
             <div className='flex flex-col justify-center items-start gap-2 font-light'>
-                <a href="#">Home</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Process</a>
-                <a href="#">Contact Us</a>
+                <Link to="/">Home</Link>
+                <Link to="/portfolio">Portfolio</Link>
+                <Link to="/process">Process</Link>
+                <Link to="/contact">Contact Us</Link>
             </div>
         </div>
         

@@ -15,7 +15,6 @@ const toggleMobileMenu = () => {
 
     return (
         
-
         <section className='flex justify-between items-center' style={{padding: "1rem"}}>
         <Link to="/"><img src={darkLogo} alt="Okike Logo" width={60} /></Link>
             <nav className='hidden md:flex justify-center items-center gap-5 text-sm '>
@@ -32,9 +31,9 @@ const toggleMobileMenu = () => {
             </button>
             <div id='mobileMenu' className='mob  hidden fixed top-11.5 md:hidden bg-opacity-70 backdrop-blur-md items-start'>
                 <nav className='flex flex-col gap-6 items-center'>
-                    <Link to="/" className='hover:text-orange-600 hover:underline transition duration-150'>Home</Link>
-                <Link to="/portfolio" className='hover:text-orange-600 hover:underline transition duration-150'>Portfolio</Link>
-                <Link to="/contact" className='hover:text-orange-600 hover:underline transition duration-150'>Contact</Link>
+                    <Link to="/" className='text-orange-600 hover:underline transition duration-150'>Home</Link>
+                <Link to="/portfolio" className='text-orange-600 hover:underline transition duration-150'>Portfolio</Link>
+                <Link to="/contact" className='text-orange-600 hover:underline transition duration-150'>Contact</Link>
                 </nav>
             </div>
         </section>

@@ -1,5 +1,6 @@
 import bgImg2 from '../assets/Container.png';
 import { Link } from 'react-router-dom';
+import Residential from './residential';
 
 const projects = [
         {
@@ -38,10 +39,10 @@ const projects = [
 
 export default function Portfolio() {
     return (
-        <section style={{padding: "1rem .6rem"}}>
+        <section style={{padding: "1.5rem"}}>
             <div className='flex flex-col justify-center items-start gap-3'>
                 <span className='text-orange-600 font-light'>- EXECLLENCE IN FABRICATION</span>
-                <h1 className='font-bold text-xl md:text-3xl'>Our Fabrication Legacy</h1>
+                <h1 className='font-bold text-xl md:text-3xl' >Our Fabrication Legacy</h1>
                 <p>Exploring the intersection of raw material and digital precision. Each monolith is a testament to our commitment to structural permanence and aesthetic clarity.</p>
             </div>
             <div className=" mx-auto p-8 bg-[#faf8f5]">
@@ -65,6 +66,8 @@ export default function Portfolio() {
                 <p className="text-xs font-medium tracking-wider text-orange-500 uppercase mb-1">
                 {project.category}
                 </p>
+
+                <Link to="/residential">View More</Link>
                 
                 
                 <h3 className="text-lg font-semibold text-gray-900 leading-tight">
