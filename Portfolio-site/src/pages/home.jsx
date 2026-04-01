@@ -4,6 +4,7 @@ import bgImg2 from '../assets/Container.png';
 import Compass from '../assets/Container.svg';
 import Laurel from '../assets/Laurel-3.png';
 import Consultation from '../assets/consultation.png'
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -20,9 +21,9 @@ export default function Home() {
                 {/* hero cta btns */}
                 <div className="cta flex flex-col md:flex-row justify-center w-full items-center gap-3">
                     {/* view projects cta btn */}
-                    <a href="#" className='bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300 md:w-1/2'  style={{padding: "12px 25px", width: "100%"}}>View Projects</a>
+                    <Link to="/portfolio" className='bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300 md:w-1/2'  style={{padding: "12px 25px", width: "100%"}}>View Projects</Link>
                     {/* contact us btn */}
-                    <a href="#" className='text-stone-200 rounded-xl border-stone-100 border-2 hover:bg-orange-800 transition duration-300 md:w-1/2' style={{padding: "12px 32px", width: "100%"}}>Contact Us</a>
+                    <Link to="/contact" className='text-stone-200 rounded-xl border-stone-100 border-2 hover:bg-orange-800 transition duration-300 md:w-1/2' style={{padding: "12px 32px", width: "100%"}}>Contact Us</Link>
                 </div>
             </div>
             

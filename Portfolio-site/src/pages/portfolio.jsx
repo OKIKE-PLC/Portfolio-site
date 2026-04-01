@@ -1,6 +1,6 @@
 import bgImg2 from '../assets/Container.png';
 import { Link } from 'react-router-dom';
-import Residential from './residential';
+// import Residential from './residential';
 
 const projects = [
         {
