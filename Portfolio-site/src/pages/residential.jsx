@@ -24,29 +24,29 @@ export default function Residential() {
 
             <main>
                 {/* Challenge */}
-                <div id='challenge' className='flex flex-col lg:flex-row justify-center items-start gap-2.5' style={{padding: ' .3rem 1rem '}}>
+                <section id='challenge' className='flex flex-col lg:flex-row justify-between items-start gap-2.5' style={{padding: ' 2rem 1rem '}}>
                     {/* challeneg txt */}
-                    <div className='flex flex-col justify-center items-start gap-2.5 lg:w-1/2'>
+                    <div className='flex flex-col justify-center items-start gap-2.5 '>
                             <h4 className='text-orange-600 '>THE CHALLENEGE</h4>
                             <p>The Lagos Waterfront presented a unique architectural paradox: the need for a structure that felt ephemeral and light while resisting the brutal corrosive power of a high-salinity coastal environment. The Atlantic mist and shifting sands created a site that was as volatile as it was beautiful.</p>
                         
                     </div>
                     {/* residential img */}
-                    <div className='rounded-sm lg:rounded-xl lg:w-1/2 object-contain'>
-                        <img className='rounded-sm lg:rounded-xl lg:w-full max-h-90 object-cover' height={60} src={residential} alt="residential building" />
+                    <div className='rounded-sm lg:rounded-xl object-contain w-full'>
+                        <img className='rounded-sm lg:rounded-xl w-full max-h-90 object-cover' src={residential} alt="residential building" />
                     </div>
                     
-                </div>
+                </section>
 
                 {/* process */}
-                <div id='process' className='flex flex-col lg:flex-row  justify-center items-start gap-2.5' style={{padding: ' .3rem 1rem '}}>
-                    <h3 className='text-orange-600 font-light'>Fabrication Process</h3>
+                <section id='process' className='flex flex-col w-full justify-center items-start gap-2.5' style={{padding: ' 4rem 1rem '}}>
+                    <h3 className='text-orange-600 font-light' tyle={{marginBottom: "1rem"}}>Fabrication Process</h3>
                     <FabCards />
-                </div>
+                </section>
                 {/* solution */}
-                <div id="solution" className='flex flex-col justify-center items-start gap-2.5' style={{padding: ' .3rem 1rem '}}>
+                <section id="solution" className='flex flex-col justify-center items-start gap-2.5' style={{padding: ' .3rem 1rem '}}>
                     <h3 className='text-orange-600 font-light items-start'>Solution</h3>
-                </div>
+                </section>
             </main>
             
 
