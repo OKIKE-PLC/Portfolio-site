@@ -19,11 +19,12 @@ const toggleMobileMenu = () => {
         <Link to="/"><img src={darkLogo} alt="Okike Logo" width={60} /></Link>
             <nav className='hidden md:flex justify-center items-center gap-5 text-sm '>
                 <Link to="/" className='hover:text-orange-600 hover:underline transition duration-150'>Home</Link>
+                <Link to="/about" className='text-orange-600 hover:underline transition duration-150'>About</Link>
                 <Link to="/portfolio" className='hover:text-orange-600 hover:underline transition duration-150'>Portfolio</Link>
                 <Link to="/contact" className='hover:text-orange-600 hover:underline transition duration-150'>Contact</Link>
             </nav>
 
-            <Link to="/contact" className='hidden md:block bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300' style={{padding: ".3rem .5rem"}}>Contact Us</Link>
+            <a href="https://wa.me/2349045942474?text=Hello%20I%20am%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer" className='hidden md:block bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300' style={{padding: ".3rem .5rem"}}>Contact Us</a>
 
             {/* mobile navigation visible only on mobile */}
             <button onClick={toggleMobileMenu} className='md:hidden text-3xl p-2 z-50'>
@@ -32,6 +33,7 @@ const toggleMobileMenu = () => {
             <div id='mobileMenu' className='mob  hidden fixed top-11.5 md:hidden bg-opacity-70 backdrop-blur-md items-start'>
                 <nav className='flex flex-col gap-6 items-center'>
                     <Link to="/" className='text-orange-600 hover:underline transition duration-150'>Home</Link>
+                    <Link to="/about" className='text-orange-600 hover:underline transition duration-150'>About</Link>
                 <Link to="/portfolio" className='text-orange-600 hover:underline transition duration-150'>Portfolio</Link>
                 <Link to="/contact" className='text-orange-600 hover:underline transition duration-150'>Contact</Link>
                 </nav>

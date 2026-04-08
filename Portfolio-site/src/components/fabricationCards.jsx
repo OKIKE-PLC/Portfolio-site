@@ -77,13 +77,13 @@ const cards = [
 
 export default function FabCards() {
     return (
-        <section className='flex flex-col md:flex-row gap-5 md:flex-wrap justify-start items-start w-full'>
+        <section className='flex flex-col md:flex-row gap-5 md:flex-wrap justify-center items-start w-full'>
             {cards.map((card) => (
                 <div key={card.id} className={`card ${card.background} w-full md:w-1/5 flex flex-col justify-center items-start gap-5` } style={{padding: "1rem "}}>
-                    <div className="img w-15 h-15 border rounded-full border-[#907067] flex justify-center  items-center">
+                    <div className="img w-15 h-15 border rounded-full border-orange-600 flex justify-center  items-center">
                         <img src={card.image} alt={card.header} />
                     </div>
-                    <h4 className="text-xl md:text-xl font-bold">{card.header}</h4>
+                    <h4 className="text-xl md:text-xl font-bold text-orange-900">{card.header}</h4>
                     <p className="text-[#1C1C19] font-light">{card.text}</p>
                 </div>
             ))}

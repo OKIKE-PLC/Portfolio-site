@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 import darkLogo from '../assets/Dark.png';
+import { FaLinkedinIn } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
     return (
@@ -36,9 +40,11 @@ export default function Footer() {
         </div>
         <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Social</span>
-            <div className='flex flex-col justify-center items-start gap-2 font-light'>
-                <a href="#">X</a>
-                <a href="#">LinkedIn</a>
+            <div className='flex flex-col justify-center items-start gap-5 font-light'>
+                <a href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /></a>
+                <a href="https://x.com/Okikeplc"><BsTwitterX /></a>
+                <a href="https://www.instagram.com/okikestudio"><FaInstagram /></a>
+                <a href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /></a>
                 
             </div>
         </div>
