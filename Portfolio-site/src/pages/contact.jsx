@@ -67,7 +67,7 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="Business email"
+                        placeholder="Email address"
                         className="w-full border border-stone-300 rounded-xl px-4 py-3 outline-none focus:border-orange-600"
                         required
 
@@ -85,7 +85,10 @@ export default function Contact() {
                         <option value="">Select service</option>
                         <option>Interior Design</option>
                         <option>3D and Architectural Design</option>
-                        <option>Residential</option>
+                        <option>Woodwork</option>
+                        <option>Renovations</option>
+                        <option>Furniture</option>
+                        <option>Other</option>
                     </select>
 
                     <textarea
@@ -93,7 +96,7 @@ export default function Contact() {
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Tell us about your project goals..."
+                        placeholder="Tell us about your project..."
                         className="w-full border border-stone-300 rounded-xl px-4 py-3 outline-none focus:border-orange-600"
                     required
                     style={{padding: ".5rem"}}

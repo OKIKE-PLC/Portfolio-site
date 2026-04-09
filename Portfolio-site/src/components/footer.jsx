@@ -8,7 +8,7 @@ import { FaFacebookF } from "react-icons/fa";
 export default function Footer() {
     return (
         <footer className='grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-5 lg:grid-rows-1 gap-4 bg-[#1C1C19] text-zinc-100' style={{padding: "3rem 1rem"}}>
-        <div className='flex flex-col gap-3 justify-center items-start'>
+        <div className='flex flex-col gap-3 justify-start items-start'>
             <a href="#"><img src={darkLogo} alt="Okike Logo" width={60} /></a>
             <p>The Architectural Monolith. Engineering excellence and design precision in every structural detail.</p>
         </div>
@@ -18,7 +18,7 @@ export default function Footer() {
                 <Link to="/">Home</Link>
                 <Link to="/portfolio">Portfolio</Link>
                 <Link to="/process">Process</Link>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact">Contact</Link>
             </div>
         </div>
         

@@ -45,7 +45,7 @@ export default function Portfolio() {
                 <h1 className='font-bold text-xl md:text-3xl' >Our Fabrication Legacy</h1>
                 <p>Exploring the intersection of raw material and digital precision. Each monolith is a testament to our commitment to structural permanence and aesthetic clarity.</p>
             </div>
-            <div className=" mx-auto p-8 bg-[#faf8f5]">
+            <div className=" mx-auto p-8">
 
         <div className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8 "  >
             {projects.map((project, index) => (
