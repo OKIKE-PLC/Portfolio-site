@@ -12,9 +12,9 @@ export default function Footer() {
             <a href="#"><img src={darkLogo} alt="Okike Logo" width={60} /></a>
             <p>The Architectural Monolith. Engineering excellence and design precision in every structural detail.</p>
         </div>
-        <div className='flex flex-col gap-3 justify-center items-start'>
+        <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Explore</span>
-            <div className='flex flex-col justify-center items-start gap-2 font-light'>
+            <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <Link to="/">Home</Link>
                 <Link to="/portfolio">Portfolio</Link>
                 <Link to="/process">Process</Link>
@@ -22,9 +22,9 @@ export default function Footer() {
             </div>
         </div>
         
-        <div className='flex flex-col gap-3 justify-center items-start'>
+        <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Services</span>
-            <div className='flex flex-col justify-center items-start gap-2 font-light'>
+            <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <a href="#">Interior Design</a>
                 <a href="#">3D and Architectural Design</a>
                 <a href="#">Oil and Gas</a>
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
         <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Legal</span>
-            <div className='flex flex-col justify-center items-start gap-2 font-light'>
+            <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
             </div>
@@ -41,10 +41,10 @@ export default function Footer() {
         <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Social</span>
             <div className='flex flex-col justify-center items-start gap-5 font-light'>
-                <a href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /></a>
-                <a href="https://x.com/Okikeplc"><BsTwitterX /></a>
-                <a href="https://www.instagram.com/okikestudio"><FaInstagram /></a>
-                <a href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /></a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /> LinkedIn</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://x.com/Okikeplc"><BsTwitterX /> Twitter</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/okikestudio"><FaInstagram /> Instagram</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /> Facebook</a>
                 
             </div>
         </div>
