@@ -3,7 +3,7 @@ import Laurel from '../assets/Laurel-3.png';
 
 export default function About() {
     return (
-        <section className='flex flex-col justify-center items-center gap-2' style={{padding: ' 0rem 1rem '}}>
+        <section className='flex flex-col justify-center items-center gap-2' style={{padding: ' 0rem '}}>
             {/* header section */}
             <header className="hero flex flex-col justify-end items-start h-screen w-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg2}')`, padding: "0 1rem"} }>
                 <div className='flex flex-col justify-end items-start gap-2 z-10' style={{padding: "7rem 0"} }>
@@ -14,23 +14,46 @@ export default function About() {
 
             <main className=''>
                 {/* about us */}
-                <section className='flex flex-col md:flex-row justify-center items-start gap-2.5' style={{padding: ' 3.5rem 0rem '}}>
+                <section className='flex flex-col md:flex-row justify-center items-start gap-2.5' style={{padding: ' 3.5rem 1rem '}}>
                   
-                        <img src={Laurel} alt="About Us" className='w-full md:w-1/2 object-cover rounded-xl shadow-lg' style={{height: '30rem'}} />
+                        <img src={Laurel} alt="About Us" className='w-full md:w-1/2 md:object-cover rounded-xl' style={{height: '30rem'}} />
                     
                     <div className='w-full md:w-1/2'>
-                        <h2 className='text-4xl font-bold text-orange-600'>About Us</h2>
-                        <p className='text-xl font-light leading-relaxed'>We are a fabrication company that specializes in building high-quality structures for our clients. We have been in business for over 10 years and have a proven track record of success. We are committed to providing our clients with the best possible service and products.</p>
+                        <h2 className='text-4xl font-bold text-orange-600'  style={{marginBottom: ' 1.5rem '}}>ABOUT US: THE PHILOSOPHY</h2>
+                        <p className='text-xl font-light leading-relaxed'>We belive that deign directly influences the way we think, live,and behave. A well designed space quietly organises life, shaping the way people move, interact, and experience their environment. Okike is our to exploring these ideas of creation. With every project we help our clients realise the possibilities within their spaces, guiding vision into form. </p>
+                        <p className='text-xl font-light leading-relaxed' style={{marginTop: ' 1rem '}}>
+                            Through thoughtful collaborations with industry experts, we bring each brief to life with careful attention to detail, ensuring that everyspave is built, designed or renewed with purpose.
+                        </p>
                     </div>
                 </section>
 
                 {/* why choose us */}
-                <section className='flex flex-col md:flex-row justify-left items-start gap-2.5' style={{padding: ' 3.5rem 0rem '}}>
-                    <div className='w-full md:w-1/2'>
-                        <h2 className='text-4xl font-bold text-orange-600'>Why Choose Us</h2>
-                        <p className='text-xl font-light leading-relaxed'>We are a fabrication company that specializes in building high-quality structures for our clients. We have been in business for over 10 years and have a proven track record of success. We are committed to providing our clients with the best possible service and products.</p>
-                    </div>
-                    {/* <img src={Laurel} alt="About Us" className='w-full md:w-1/2 object-cover rounded-xl shadow-lg' style={{height: '30rem'}} /> */}
+                <section className='flex flex-col justify-left items-start gap-2.5 bg-[#1c1c19] text-zinc-200' style={{padding: ' 3.5rem 1rem '}}>
+                    <h2 className='text-4xl  font-bold text-orange-600' style={{marginBottom: ' 1.5rem '}}>Why Choose Us</h2>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-2 '>
+
+                        {/* design for real life */}
+                            <div className='w-full flex flex-col justify-center items-start gap-2'>
+                                <h3 className='text-2xl font-bold text-orange-600'>Design for Real Life:</h3>
+                                <article className='text-xl font-light leading-relaxed'>We believe spaces should support how people truly live and work. Our designs consider movement, comfort, and daily habits to create environments that feel natural and easy to use.</article>
+                            </div>
+                            {/* radical responsibilty */}
+                            <div className='w-full flex flex-col justify-center items-start gap-2'>
+                                <h3 className='text-2xl font-bold text-orange-600'>Radical Responsibilty:</h3>
+                                <article className='text-xl font-light leading-relaxed'>We own the oitcome. We believe responsibilty is the ability to own the result of an action, whether good or bad. We deliver results</article>
+                            </div>
+                            {/* system-driven execution*/}
+                            <div className='w-full flex flex-col justify-center items-start gap-2'>
+                                <h3 className='text-2xl font-bold text-orange-600'>System-Driven Execution:</h3>
+                                <article className='text-xl font-light leading-relaxed'>We don't rely on "luck" or "bursts of energy". We rely on a structured operational framework that ensures every nail ans=d every brushstroke is documented and verified.</article>
+                            </div>
+                            {/* integrity in craft */}
+                            <div className='w-full flex flex-col justify-center items-start gap-2'>
+                                <h3 className='text-2xl font-bold text-orange-600'>Integrity in Craft:</h3>
+                                <article className='text-xl font-light leading-relaxed'>We maintain a "Learning Loop". Our humilty allows us to consistently refine our craft, ensuring that our "Masrer" mind always has control over the technical execution.</article>
+                            </div>
+                        </div>
+                   
                 </section>
             </main>
         </section>

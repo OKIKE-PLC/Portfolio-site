@@ -14,8 +14,8 @@ export default function Home() {
             <section className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"} }>
                 {/* hero text div */}
             <header className="content flex  flex-col justify-center items-start md:items-center text-left  md:text-center">
-                <h1 className='text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold m-5'>Redefining Architectural Fabrication.</h1>
-                <p className="md:text-2xl max-w-sm md:max-w-3xl">Bespoke elements and construction excellence in Nigeria. We blend structural integrity with aesthetic precision to create enduring landmarks.
+                <h1 className='italic text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold  m-5'>Design . Build . Renovate</h1>
+                <p className="md:text-2xl max-w-sm md:max-w-3xl text-orange-600">Architecture Goes Beyond Beauty
                 </p>
 
                 {/* hero cta btns */}
