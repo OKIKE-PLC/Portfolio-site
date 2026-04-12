@@ -13,7 +13,7 @@ export default function Home() {
             {/* hero section */}
             <section className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"} }>
                 {/* hero text div */}
-            <div className="content flex  flex-col justify-center items-start md:items-center text-left  md:text-center">
+            <header className="content flex  flex-col justify-center items-start md:items-center text-left  md:text-center">
                 <h1 className='text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold m-5'>Redefining Architectural Fabrication.</h1>
                 <p className="md:text-2xl max-w-sm md:max-w-3xl">Bespoke elements and construction excellence in Nigeria. We blend structural integrity with aesthetic precision to create enduring landmarks.
                 </p>
@@ -25,7 +25,7 @@ export default function Home() {
                     {/* contact us btn */}
                     <Link to="/contact" className='text-stone-200 rounded-xl border-stone-100 border-2 hover:bg-orange-800 transition duration-300 md:w-1/2' style={{padding: "12px 32px", width: "100%"}}>Contact Us</Link>
                 </div>
-            </div>
+            </header>
             
             </section>
 
@@ -39,7 +39,7 @@ export default function Home() {
                 {/* service card  */}
                 <div className=" rounded-xl  grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-2 justify-center items-center gap-4">
                     {/* individual cards */}
-                    <div className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
                         <span className="text-[#907067]  text-2xl font-bold">01</span>
                         <h4 className="text-2xl font-bold">Architectural Fabrication</h4>
                         <p className="text-[#1C1C19] font-light">Custom metalwork, facade systems, and ornamental structures
@@ -50,8 +50,8 @@ export default function Home() {
                         {/* <Compass /> */}
                         </div>
                         
-                    </div>
-                    <div className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    </article>
+                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
                         <span className="text-[#907067]  text-2xl font-bold">01</span>
                         <h4 className="text-2xl font-bold">Architectural Fabrication</h4>
                         <p className="text-[#1C1C19] font-light">Custom metalwork, facade systems, and ornamental structures
@@ -62,8 +62,8 @@ export default function Home() {
                         {/* <Compass /> */}
                         </div>
                         
-                    </div>
-                    <div className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    </article>
+                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
                         <span className="text-[#907067]  text-2xl font-bold">01</span>
                         <h4 className="text-2xl font-bold">Architectural Fabrication</h4>
                         <p className="text-[#1C1C19] font-light">Custom metalwork, facade systems, and ornamental structures
@@ -74,8 +74,8 @@ export default function Home() {
                         {/* <Compass /> */}
                         </div>
                         
-                    </div>
-                    <div className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    </article>
+                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
                         <span className="text-[#907067]  text-2xl font-bold">01</span>
                         <h4 className="text-2xl font-bold">Architectural Fabrication</h4>
                         <p className="text-[#1C1C19] font-light">Custom metalwork, facade systems, and ornamental structures
@@ -86,7 +86,7 @@ export default function Home() {
                         {/* <Compass /> */}
                         </div>
                         
-                    </div>
+                    </article>
                 </div>
                 
             </section>
