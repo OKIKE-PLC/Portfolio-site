@@ -23,6 +23,15 @@ export default function About() {
                         <p className='text-xl font-light leading-relaxed'>We are a fabrication company that specializes in building high-quality structures for our clients. We have been in business for over 10 years and have a proven track record of success. We are committed to providing our clients with the best possible service and products.</p>
                     </div>
                 </section>
+
+                {/* why choose us */}
+                <section className='flex flex-col md:flex-row justify-left items-start gap-2.5' style={{padding: ' 3.5rem 0rem '}}>
+                    <div className='w-full md:w-1/2'>
+                        <h2 className='text-4xl font-bold text-orange-600'>Why Choose Us</h2>
+                        <p className='text-xl font-light leading-relaxed'>We are a fabrication company that specializes in building high-quality structures for our clients. We have been in business for over 10 years and have a proven track record of success. We are committed to providing our clients with the best possible service and products.</p>
+                    </div>
+                    {/* <img src={Laurel} alt="About Us" className='w-full md:w-1/2 object-cover rounded-xl shadow-lg' style={{height: '30rem'}} /> */}
+                </section>
             </main>
         </section>
     )
