@@ -21,7 +21,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/process" element={<Process />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/residential" element={<Residential />} />
+          <Route path="/portfolio/residential" element={<Residential />} />
         </Routes>
       </main>
       <Footer />
