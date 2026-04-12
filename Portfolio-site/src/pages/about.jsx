@@ -1,5 +1,7 @@
 import bgImg2 from "../assets/Container.png";
 import Laurel from "../assets/Laurel-3.png";
+import Partner from "../components/partner";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -71,9 +73,7 @@ export default function About() {
         {/* why choose us */}
         <section
           className="flex flex-col justify-left items-start gap-2.5 bg-[#1c1c19] text-zinc-200"
-          style={{ padding: " 0rem 1rem 3.5rem 1rem ",
-            
-           }}
+          
         >
           <h2
             className="text-4xl bg-[#F5F2ED] font-bold text-orange-600"
@@ -81,7 +81,7 @@ export default function About() {
           >
             Why Choose Us
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 " style={{ padding: " 0rem 1rem 3.5rem 1rem "}}>
             {/* design for real life */}
             <div className="w-full flex flex-col justify-center items-start gap-2">
               <h3 className="text-2xl font-bold text-orange-600">
@@ -128,6 +128,15 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* <section className="bg-orange-600 text-zinc-100 flex flex-col justify-center items-center text-center gap-5" style={{padding: "3rem",
+
+            }}>
+                <h3 className="font-bold text-2xl md:4xl lg:6xl">Ready to Build Your Legacy?</h3>
+                <Link to="/contact" className="bg-[#1C1C19] rounded-xl" style={{padding: "1rem"}}>Partener with Us</Link>
+            </section> */}
+        <Partner />
+        
       </main>
     </section>
   );

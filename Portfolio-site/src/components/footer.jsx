@@ -41,10 +41,10 @@ export default function Footer() {
         <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Social</span>
             <div className='flex flex-col justify-center items-start gap-5 font-light'>
-                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /> LinkedIn</a>
-                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://x.com/Okikeplc"><BsTwitterX /> Twitter</a>
-                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/okikestudio"><FaInstagram /> Instagram</a>
-                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /> Facebook</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /> okike-plc</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://x.com/Okikeplc"><BsTwitterX /> okikeplc</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/okikestudio"><FaInstagram /> okikestudio</a>
+                <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /> okikeplc</a>
                 
             </div>
         </div>

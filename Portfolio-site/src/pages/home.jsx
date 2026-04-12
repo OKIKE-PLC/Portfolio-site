@@ -5,6 +5,7 @@ import Compass from '../assets/Container.svg';
 import Laurel from '../assets/Laurel-3.png';
 import Consultation from '../assets/consultation.png'
 import { Link } from 'react-router-dom';
+import Partner from '../components/partner';
 
 export default function Home() {
     return (
@@ -120,7 +121,7 @@ export default function Home() {
                     
             </section>
 
-            {/* Workprocess */}
+            {/* Workprocess
             <section className="process flex flex-col  justify-center items-center gap-6" style={{margin: "3rem 0"}}>
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold" style={{margin: "0 0 3rem 0"}}>The Blueprint</h3>
                         <div className="w-process grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1 justify-center items-center w-full">
@@ -165,18 +166,18 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-            </section>
+            </section> */}
 
             {/* Our legacy section */}
-            <section className="legacy flex flex-col lg:flex-row gap-5">
+            <section className="legacy flex flex-col lg:flex-row justify-center items-center gap-5">
                 <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2"/>
                 <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
-                    <span className="font-light text-orange-600">Our Legacy</span>
-                    <h4 className="font-bold text-3xl md:4xl lg:6xl">Forging Tomorrow Since 1999.</h4>
-                    <p className="text-xl md:text-2xl">OKIKE PLC emerged from a singular vision: to bridge the gap between architectural imagination and structural reality. We are more than fabricators; we are partners in the construction of Nigeria's future skyline.</p>
-                    <p className="text-xl md:text-2xl">Every bolt we tighten and every beam we forge carries the weight of our commitment to excellence. Our facility in Lagos serves as a laboratory of innovation where raw materials are transformed into iconic elements.</p>
+                    <span className="font-semibold text-xl text-orange-600">Our Legacy</span>
+                    <h4 className="font-bold text-3xl md:4xl lg:6xl">Company Profile</h4>
+                    <p className="text-xl md:text-2xl">OKIKE PLC is a Port Harcourt based design build firm specializing in the creation of high functioning and commercial spaces. Our team is defined as a group of professionals intentionally pit together to form a system.</p>
+                    <p className="text-xl md:text-2xl">We are proud of the trust earned through our commitment to transperancy, discipline, and the mastery of the built environment</p>
 
-                    <div className="flex flex-col lg:flex-row gap-6 w-full">
+                    {/* <div className="flex flex-col lg:flex-row gap-6 w-full">
                         <div className="w-1/2">
                             <h5 className="text-3xl font-bold">500+</h5>
                             <p className="text-xl">Projects Completed</p>
@@ -185,18 +186,14 @@ export default function Home() {
                             <h5 className="text-3xl font-bold">500+</h5>
                             <p className="text-xl">Projects Completed</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 
             </section>
 
-            <section className="bg-orange-600 text-zinc-100 flex flex-col justify-center items-center text-center gap-5" style={{padding: "3rem",
+           
 
-            }}>
-                <h3 className="font-bold text-2xl md:4xl lg:6xl">Ready to Build Your Legacy?</h3>
-                <a href="#" className="bg-[#1C1C19] rounded-xl" style={{padding: "1rem"}}>Partener with Us</a>
-            </section>
-
+            <Partner />
             
             
             

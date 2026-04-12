@@ -20,3 +20,9 @@ html {
     @apply bg-[#F5F2ED] text-[#1C1C19]  
   }
 } 
+
+/* @layer components {
+  .mob {
+    @apply w-full h-screen bg-stone-900 text-white flex flex-col gap-6 items-start;
+  }
+} */
