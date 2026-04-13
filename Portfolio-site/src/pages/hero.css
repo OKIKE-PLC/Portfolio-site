@@ -1,16 +1,18 @@
 .content {
   position: relative;
   z-index: 2;
-  color: rgb(223, 223, 205);
+  color: #dfdfcd;
 }
 
 .content > h1 {
   margin-bottom: 0.8rem;
   line-height: 4rem;
+  font-family: 'Chubbo', sans-serif;
 }
 
 .content > p {
   margin-bottom: 0.6rem;
+  font-family: 'Supreme', sans-serif;
 }
 
 .hero::before {
@@ -44,9 +46,41 @@
   padding: 1rem;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .card {
+  position: relative;
   padding: 0.6rem;
   border-radius: 0.7rem;
+}
+
+.card::after, .card::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #EA580C, transparent 25%);
+  top: 50%;
+  left: 50%;
+   transform: translate(-50%, -50%);
+  z-index: -1;
+  padding: 2rem;
+  border-radius: .5rem;
+  animation:  3s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(.5rem);
+  opacity: 1;
+}
+
+@keyframes spin {
+  from { --angle: 0deg; }
+  to { --angle: 360deg; }
 }
 
 .card > .img {

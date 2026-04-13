@@ -17,9 +17,14 @@ html {
 @layer base {
 
   body {
-    @apply bg-[#F5F2ED] text-[#1C1C19]  
+    font-family: 'Supreme', sans-serif;
+    @apply bg-[#F5F2ED] text-[#1C1C19];
   }
-} 
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chubbo', sans-serif;
+  }
+}
 
 /* @layer components {
   .mob {

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { RiMenu4Line } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import darkLogo from "../assets/Dark.png";
 
 export default function Navbar() {
@@ -36,39 +36,63 @@ export default function Navbar() {
       <Link to="/">
         <img src={darkLogo} alt="Okike Logo" width={60} />
       </Link>
-      <nav className="hidden md:flex justify-center items-center gap-5 text-sm ">
-        <Link
+      <nav className="hidden md:flex justify-center items-center gap-3 text-sm ">
+        <NavLink
           to="/"
-          className="active:text-orange-600 hover:text-orange-600 hover:underline transition duration-150"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
+              isActive
+                ? "bg-orange-600 text-stone-100 font-medium"
+                : "hover:bg-orange-200 hover:text-orange-700"
+            }`
+          } style={{ padding: ".5rem 1rem" }}
         >
           Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/about"
-          className="active:text-orange-600 hover:text-orange-600 hover:underline transition duration-150"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
+              isActive
+                ? "bg-orange-600 text-stone-100 font-medium"
+                : "hover:bg-orange-200 hover:text-orange-700"
+            }`
+          } style={{ padding: ".5rem 1rem" }}
         >
           About
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/portfolio"
-          className="active:text-orange-600 hover:text-orange-600 hover:underline transition duration-150"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
+              isActive
+                ? "bg-orange-600 text-stone-100 font-medium"
+                : "hover:bg-orange-200 hover:text-orange-700"
+            }`
+          } style={{ padding: ".5rem 1rem" }}
         >
           Portfolio
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/contact"
-          className="active:text-orange-600 hover:text-osrange-600 hover:underline transition duration-150"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
+              isActive
+                ? "bg-orange-600 text-stone-100 font-medium"
+                : "hover:bg-orange-200 hover:text-orange-700"
+            }`
+          } style={{ padding: ".5rem 1rem" }}
         >
           Contact
-        </Link>
+        </NavLink>
       </nav>
 
       <a
         href="https://wa.me/2349045942474?text=Hello%20I%20am%20interested%20in%20your%20services"
         target="_blank"
         rel="noopener noreferrer"
-        className="hidden md:block bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300"
-        style={{ padding: ".3rem .5rem" }}
+        className="hidden md:block bg-orange-600 text-stone-100 rounded-lg hover:bg-orange-800 transition duration-300"
+        style={{ padding: ".5rem 1rem" }}
       >
         Contact Us
       </a>
@@ -89,34 +113,58 @@ export default function Navbar() {
         }`}
       >
         <nav 
-          className="flex flex-col gap-6 items-center bg-stone-900" 
+          className="flex flex-col gap-4 items-center bg-stone-900" 
           style={{padding: "1rem"}}
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <Link
+          <NavLink
             to="/"
-            className="text-orange-600 hover:underline transition duration-150"
+            className={({ isActive }) =>
+              `px-6 py-3 w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
+                isActive
+                  ? "bg-orange-600 text-stone-100 font-medium"
+                  : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
+              }`
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
-            className="text-orange-600 hover:underline transition duration-150"
+            className={({ isActive }) =>
+              `px-6 py-3 w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
+                isActive
+                  ? "bg-orange-600 text-stone-100 font-medium"
+                  : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
+              }`
+            }
           >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/portfolio"
-            className="text-orange-600 hover:underline transition duration-150"
+            className={({ isActive }) =>
+              `px-6 py-3 w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
+                isActive
+                  ? "bg-orange-600 text-stone-100 font-medium"
+                  : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
+              }`
+            }
           >
             Portfolio
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
-            className="text-orange-600 hover:underline transition duration-150"
+            className={({ isActive }) =>
+              `px-6 py-3 w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
+                isActive
+                  ? "bg-orange-600 text-stone-100 font-medium"
+                  : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
+              }`
+            } 
           >
             Contact
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </section>

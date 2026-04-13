@@ -1,6 +1,7 @@
 import { CiLocationOn } from "react-icons/ci";
 import { MdOutlineEmail } from "react-icons/md";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,7 +21,13 @@ export default function Contact() {
   };
 
   return (
-    <section className="mx-auto" style={{ padding: "3rem 1rem" }}>
+    <motion.section 
+      className="mx-auto" 
+      style={{ padding: "3rem 1rem" }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       {/* main contact div */}
       <div className="flex flex-col md:flex-row justify-center items-start gap-5">
         {/* left div */}
@@ -117,6 +124,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,6 +1,6 @@
 import bgImg2 from "../assets/Container.png";
 import { Link } from "react-router-dom";
-// import Residential from './residential';
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -39,7 +39,12 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section style={{ padding: "1.5rem" }}>
+    <motion.section 
+      style={{ padding: "1.5rem" }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <div className="flex flex-col justify-center items-start gap-3">
         <span className="text-orange-600 font-light">
           - EXECLLENCE IN FABRICATION
@@ -60,30 +65,34 @@ export default function Portfolio() {
         className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8 "
         style={{ marginTop: "1rem" }}
       >
-        {projects.map((project) => (
-          <div
+        {projects.map((project, index) => (
+          <motion.div
             key={project.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.1 }}
             className="relative h-[400px] mx-auto w-full group cursor-pointer overflow-hidden rounded-lg"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-700 ease-in-out group-hover:grayscale-0 group-hover:scale-110"
+              className="absolute inset-0 w-full h-full object-cover grayscale-0 md:grayscale transition-all duration-700 ease-in-out md:group-hover:grayscale-0 md:group-hover:scale-110"
             />
 
             <div
-              className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out flex flex-col justify-end p-6 md:p-8"
+              className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 ease-in-out flex flex-col justify-end p-6 md:p-8"
               style={{ padding: ".5rem" }}
             >
-              <p className="text-xs font-semibold tracking-wider text-orange-500 uppercase mb-2 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-out">
+              <p className="text-xs font-semibold tracking-wider text-orange-500 uppercase mb-2 transform translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-700 ease-out">
                 {project.category}
               </p>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight mb-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-out delay-100">
+              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight mb-4 transform translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-700 ease-out md:delay-100">
                 {project.title}
               </h3>
 
-              <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-out delay-200">
+              <div className="transform translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-700 ease-out md:delay-200">
                 <Link
                   to="/portfolio/residential"
                   className="inline-block text-white text-sm font-medium border-b-2 border-orange-500 pb-1 hover:text-orange-400 hover:border-orange-400 transition-colors"
@@ -92,9 +101,9 @@ export default function Portfolio() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

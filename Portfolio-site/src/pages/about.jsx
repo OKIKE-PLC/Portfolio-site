@@ -2,6 +2,7 @@ import bgImg2 from "../assets/Container.png";
 import Laurel from "../assets/Laurel-3.png";
 import Partner from "../components/partner";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -10,9 +11,12 @@ export default function About() {
       style={{ padding: " 0rem " }}
     >
       {/* header section */}
-      <header
+      <motion.header
         className="hero flex flex-col justify-end items-start h-screen w-screen bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url('${bgImg2}')`, padding: "0 1rem" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
         <div
           className="flex flex-col justify-end items-start gap-2 z-10"
@@ -23,13 +27,17 @@ export default function About() {
             Fabrication Excellence
           </h1>
         </div>
-      </header>
+      </motion.header>
 
       <main className="">
         {/* about us */}
-        <section
+        <motion.section
           className="flex flex-col md:flex-row justify-center items-start gap-2.5"
           style={{ padding: " 3.5rem 1rem " }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
         >
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
                 <img
@@ -68,12 +76,15 @@ export default function About() {
             </div>
             
           </div>
-        </section>
+        </motion.section>
 
         {/* why choose us */}
-        <section
+        <motion.section
           className="flex flex-col justify-left items-start gap-2.5 bg-[#1c1c19] text-zinc-200"
-          
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
         >
           <h2
             className="text-4xl bg-[#F5F2ED] font-bold text-orange-600"
@@ -127,7 +138,7 @@ export default function About() {
               </article>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* <section className="bg-orange-600 text-zinc-100 flex flex-col justify-center items-center text-center gap-5" style={{padding: "3rem",
 

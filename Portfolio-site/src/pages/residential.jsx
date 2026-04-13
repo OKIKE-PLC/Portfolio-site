@@ -2,30 +2,45 @@ import residential from '../assets/residential.png';
 import FabCards from '../components/fabricationCards';
 import Shield from '../assets/Icon.svg';
 import './hero.css';
+import { motion } from "framer-motion";
 
 
 export default function Residential() {
     return (
         <section className='flex flex-col justify-center items-center bg-[#FCF9F4]' style={{padding: ' 0 .6rem '}}>
             {/* header section */}
-            <header className="hero flex flex-col justify-end items-start h-screen w-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${residential}')`, padding: "0 1rem"} }>
+            <motion.header 
+                className="hero flex flex-col justify-end items-start h-screen w-screen bg-cover bg-no-repeat bg-center" 
+                style={{backgroundImage: `url('${residential}')`, padding: "0 1rem"} }
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className='flex flex-col justify-end items-start gap-2 z-10' style={{padding: "7rem 0"} }>
                     <p className='font-semibold text-orange-600 text-3xl'>Case Study</p>
                     <h1 className='font-bold text-zinc-200 text-4xl md:text-5xl'>Residential</h1>
                 </div>
-            </header>
+            </motion.header>
 
             {/* page nav */}
-            <nav className='flex flex-row justify-center items-center gap-2.5 w-full md:w-1/2 border border-orange-600 rounded-xl' style={{padding: '.5rem 0', marginTop: "2rem"}}>
+            {/* <nav className='flex flex-row justify-center items-center gap-2.5 w-full md:w-1/2 border border-orange-600 rounded-xl' style={{padding: '.5rem 0', marginTop: "2rem"}}>
                 <a href="#challenge" className='text-sm md:text-xl font-bold hover:text-orange-600 '>CHALLENGE</a>
                 <a href="#process" className='text-sm md:text-xl font-bold hover:text-orange-600 '>PROCESS</a>
                 <a href="#solution" className='text-sm md:text-xl font-bold hover:text-orange-600 '>SOLUTION</a>
                 <a href="#" className='text-sm md:text-xl font-bold hover:text-orange-600 '>RESULT</a>
-            </nav>
+            </nav> */}
 
             <main>
                 {/* Challenge */}
-                <section id='challenge' className='flex flex-col lg:flex-row justify-between items-start gap-2.5' style={{padding: ' 2rem 0rem '}}>
+                <motion.section 
+                    id='challenge' 
+                    className='flex flex-col lg:flex-row justify-between items-start gap-2.5' 
+                    style={{padding: ' 2rem 0rem '}}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
                     {/* challeneg txt */}
                     <div className='flex flex-col justify-center items-start gap-2.5 w-full lg:w-1/2'>
                             <h4 className='text-orange-600 text-xl font-bold'>THE CHALLENGE</h4>
@@ -37,15 +52,31 @@ export default function Residential() {
                         <img className='rounded-sm lg:rounded-xl w-full max-h-90 object-cover' src={residential} alt="residential building" />
                     </div>
                     
-                </section>
+                </motion.section>
 
                 {/* process */}
-                <section id='process' className='flex flex-col w-full justify-center items-start gap-2.5' style={{padding: ' 4rem 0'}}>
+                <motion.section 
+                    id='process' 
+                    className='flex flex-col w-full justify-center items-start gap-2.5' 
+                    style={{padding: ' 4rem 0'}}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
                     <h3 className='text-orange-600 text-xl font-bold' style={{marginBottom: "1rem"}}>Fabrication Process</h3>
                     <FabCards />
-                </section>
+                </motion.section>
                 {/* solution */}
-                <section id="solution" className='flex flex-col md:flex-row justify-center items-start gap-2.5 bg-[#FCF9F4]' style={{padding: ' 3.5rem 0rem '}}>
+                <motion.section 
+                    id="solution" 
+                    className='flex flex-col md:flex-row justify-center items-start gap-2.5 bg-[#FCF9F4]' 
+                    style={{padding: ' 3.5rem 0rem '}}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
                     <div className='flex flex-col justify-center items-start gap-2.5 w-full md:w-1/2'>
                         <h3 className='text-orange-600 text-sm font-bold'>CONCEPTUAL CORE</h3>
                         <h4 className='text- font-bold'>Balancing visual lightness with extreme coastal durability.</h4>
@@ -82,10 +113,17 @@ export default function Residential() {
                             </div>
                          </div>
                     </div>
-                </section>
+                </motion.section>
 
                 {/* results */}
-                <section className='flex flex-col md:flex-row justify-center items-start gap-2.5' style={{padding: ' 3.5rem 0rem '}}>
+                <motion.section 
+                    className='flex flex-col md:flex-row justify-center items-start gap-2.5' 
+                    style={{padding: ' 3.5rem 0rem '}}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
                     
                     
                         <div className='flex flex-col justify-center items-start gap-2.5 w-full md:w-1/2'>
@@ -98,7 +136,7 @@ export default function Residential() {
                         <img className='rounded-sm lg:rounded-xl w-full max-h-90 object-cover' src={residential} alt="residential building" />
                     </div>
                     
-                </section>
+                </motion.section>
             </main>
             
 
