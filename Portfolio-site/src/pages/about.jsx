@@ -1,5 +1,5 @@
 import bgImg2 from "../assets/Container.png";
-import Laurel from "../assets/Laurel-3.png";
+import Sha_sha from "../assets/Sha-Sha.png";
 import Partner from "../components/partner";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -41,8 +41,8 @@ export default function About() {
         >
             <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
                 <img
-            src={Laurel}
-            alt="About Us"
+            src={Sha_sha}
+            alt="Sha-sha Ceo"
             className="w-full rounded-xl"
             style={{ height: "35rem" }}
           />

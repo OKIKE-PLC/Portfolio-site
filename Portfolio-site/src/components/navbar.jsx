@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
-import darkLogo from "../assets/Dark.png";
+import darkLogo from "../assets/(PLC)-Dark-Logo.png";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
