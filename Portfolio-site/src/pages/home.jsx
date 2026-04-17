@@ -1,7 +1,7 @@
 import './hero.css';
 import bgImg from '../assets/AMFF93_1.JPG';
 import BeachHouse from '../assets/Beach_house_3D-interior.jpg';
-import bgImg2 from '../assets/Container.png';
+import rooftop from '../assets/rooftop-mural.JPG';
 import Compass from '../assets/Container.svg';
 import Laurel from '../assets/Laurel-3.png';
 // import Consultation from '../assets/consultation.png'
@@ -17,6 +17,7 @@ import { LuBuilding2 } from "react-icons/lu";
 import { GrPaint } from "react-icons/gr";
 import { MdCleaningServices } from "react-icons/md";
 import { HiSquare3Stack3D } from "react-icons/hi2";
+import FabCards from '../components/fabricationCards';
 
 export default function Home() {
     return (
@@ -99,7 +100,7 @@ export default function Home() {
                             </ul>
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <img src={Compass} alt="compass" />
+                            <img src={Compass} alt="compass" loading="lazy" />
                         
                         </div>
                         
@@ -199,71 +200,37 @@ export default function Home() {
                         <p className="text-orange-600 text-sm md:text-xl">Selected Works</p>
                         <h3 className="text-2xl md:text-4xl font-semibold">The <span className="text-orange-600  italic">Interior</span> Series</h3>
                     </div>
-                    <a href="#">View our works</a>
+                    <Link className='hover:text-orange-600 hover:text-xl transition-all duration-300' to="/portfolio">View our works</Link>
                 </div>
                 {/* selected works cards */}
                 <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5" style={{padding: "1.5rem 0"}}>
-                    <div className="mb-5 w-full" style={{margin: "1.5rem 0"}}>
+                    <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
                         <img className="w-full rounded-xl" src={BeachHouse} alt="Beach house 3D interior" loading="lazy"/>
-                        <h4 className="text-[#1C1C19] font-bold text-xl">The Eko Monolith</h4>
+                        <h4 className="text-orange-600 font-bold text-xl">Beach House 3D Visualization</h4>
                         <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
 
                     </div>
-                    <div className="mb-5 w-full" style={{margin: "1.5rem 0"}}>
-                        <img className="w-full" src={bgImg2} alt="bgImg" />
-                        <h4 className="text-[#1C1C19] font-bold text-xl">The Eko Monolith</h4>
+                    <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
+                        <img className="w-full rounded-xl" src={rooftop} alt="rooftop mural" loading="lazy" />
+                        <h4 className="text-orange-600 font-bold text-xl">Rooftop Mural</h4>
                         <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
                     </div>
                 </div>  
             </motion.section>
-
-            {/* Workprocess
-            <section className="process flex flex-col  justify-center items-center gap-6" style={{margin: "3rem 0"}}>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold" style={{margin: "0 0 3rem 0"}}>The Blueprint</h3>
-                        <div className="w-process grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1 justify-center items-center w-full">
-                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
-                                <div className="bg-orange-600 w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src={Consultation} />
-                                </div>
-                                
-                                <div className="process-txt">
-                                    <h4 className="font-bold text-xl">Consultation</h4>
-                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
-                                </div>
-                            </div>
-                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
-                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src={Consultation} />
-                                </div>
-                                
-                                <div className="process-txt">
-                                    <h4 className="font-bold text-xl">Consultation</h4>
-                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
-                                </div>
-                            </div>
-                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
-                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src={Consultation} />
-                                </div>
-                                
-                                <div className="process-txt">
-                                    <h4 className="font-bold text-xl">Consultation</h4>
-                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
-                                </div>
-                            </div>
-                            <div className="flex flex-col justify-center items-start w-full" style={{margin: "0 0 1.5rem 0", padding: "0 1rem"}}>
-                                <div className="bg-[#907067] w-1/4 rounded-sm" style={{padding: "1.5rem", margin: "0 0 1.5rem 0"}}>
-                                    <img src={Consultation} />
-                                </div>
-                                
-                                <div className="process-txt">
-                                    <h4 className="font-bold text-xl">Consultation</h4>
-                                    <p className="font-light">Understanding your architectural vision and site requirements.</p>
-                                </div>
-                            </div>
-                        </div>
-            </section> */}
-
+                            {/* process */}
+                <motion.section 
+                    id='process' 
+                    className='flex flex-col w-full justify-center items-start gap-2.5' 
+                    style={{padding: ' 4rem 1rem'}}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
+                    <h3 className='text-orange-600 text-xl font-bold' style={{marginBottom: "1rem"}}>Fabrication Process</h3>
+                     <FabCards />
+                </motion.section>
+           
             {/* Our legacy section */}
             <motion.section 
                 className="legacy flex flex-col lg:flex-row justify-center items-center gap-5"
@@ -272,7 +239,7 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
             >
-                <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2 rounded-md"/>
+                <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2 rounded-md" loading="lazy" />
                 <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
                     <span className="font-semibold text-xl text-orange-600">Our Legacy</span>
                     <h4 className="font-bold text-3xl md:4xl lg:6xl">Company Profile</h4>

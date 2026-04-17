@@ -79,7 +79,7 @@ const cards = [
 export default function FabCards() {
   return (
     <motion.section 
-      className="flex flex-row flex-wrap justify-center items-center gap-6 w-full"
+      className="flex flex-row flex-wrap justify-center items-start gap-6 w-full"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -96,7 +96,7 @@ export default function FabCards() {
           style={{ padding: "1.5rem" }}
         >
           <div className="img p-3 shrink-0 border rounded-full border-orange-600 flex justify-center items-center">
-            <img src={card.image} alt={card.header} className="w-8 h-8" />
+            <img src={card.image} alt={card.header} className="w-8 h-8" loading="lazy" />
           </div>
           <h4 className="text-xl font-bold text-orange-900 mt-2">
             {card.header}

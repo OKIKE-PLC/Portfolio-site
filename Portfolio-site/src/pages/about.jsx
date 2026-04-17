@@ -43,6 +43,7 @@ export default function About() {
                 <img
             src={Sha_sha}
             alt="Sha-sha Ceo"
+            loading="lazy"
             className="w-full rounded-xl"
             style={{ height: "35rem" }}
           />

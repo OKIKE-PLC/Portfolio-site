@@ -77,6 +77,7 @@ export default function Portfolio() {
             <img
               src={project.image}
               alt={project.title}
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover grayscale-0 md:grayscale transition-all duration-700 ease-in-out md:group-hover:grayscale-0 md:group-hover:scale-110"
             />
 

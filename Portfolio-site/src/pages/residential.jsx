@@ -1,5 +1,5 @@
 import residential from '../assets/residential.png';
-import FabCards from '../components/fabricationCards';
+
 import Shield from '../assets/Icon.svg';
 import './hero.css';
 import { motion } from "framer-motion";
@@ -54,19 +54,7 @@ export default function Residential() {
                     
                 </motion.section>
 
-                {/* process */}
-                <motion.section 
-                    id='process' 
-                    className='flex flex-col w-full justify-center items-start gap-2.5' 
-                    style={{padding: ' 4rem 0'}}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                >
-                    <h3 className='text-orange-600 text-xl font-bold' style={{marginBottom: "1rem"}}>Fabrication Process</h3>
-                    <FabCards />
-                </motion.section>
+                
                 {/* solution */}
                 <motion.section 
                     id="solution" 
