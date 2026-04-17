@@ -6,7 +6,7 @@ export default function Partner() {
 
             }}>
                 <h3 className="font-bold text-2xl md:4xl lg:6xl">Ready to Build Your Legacy?</h3>
-                <Link to="/contact" className="bg-[#1C1C19] rounded-xl" style={{padding: "1rem"}}>Partener with Us</Link>
+                <Link to="/contact" className="bg-[#1C1C19] rounded-xl" style={{padding: "1rem"}}>Partner with Us</Link>
             </section>
     )
 }

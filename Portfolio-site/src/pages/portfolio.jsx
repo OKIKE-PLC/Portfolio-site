@@ -47,7 +47,7 @@ export default function Portfolio() {
     >
       <div className="flex flex-col justify-center items-start gap-3">
         <span className="text-orange-600 font-light">
-          - EXECLLENCE IN FABRICATION
+          - EXCELLENCE IN FABRICATION
         </span>
         <h1 className="font-bold text-xl md:text-3xl">
           Our Fabrication Legacy

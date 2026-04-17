@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import darkLogo from "../assets/(PLC)-Dark-Logo.png";
+import darkLogo from "../assets/(PLC)_Light-Logo.png";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
@@ -17,7 +17,7 @@ export default function Footer() {
             <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <Link to="/">Home</Link>
                 <Link to="/portfolio">Portfolio</Link>
-                <Link to="/process">Process</Link>
+                <Link to="/about">About</Link>
                 <Link to="/contact">Contact</Link>
             </div>
         </div>
@@ -27,25 +27,26 @@ export default function Footer() {
             <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <a href="#">Interior Design</a>
                 <a href="#">3D and Architectural Design</a>
-                <a href="#">Oil and Gas</a>
-                <a href="#">Residential</a>
+                <a href="#">Painting</a>
+                <a href="#">Cleaning</a>
+                <a href="#">Building Construction and Project Management</a>
+                <a href="#">Fabrication</a>
             </div>
         </div>
-        <div className='flex flex-col gap-3 justify-start items-start'>
+        {/* <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Legal</span>
             <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
             </div>
-        </div>
+        </div> */}
         <div className='flex flex-col gap-3 justify-start items-start'>
-            <span className='text-orange-600'>Social</span>
+            <span className='text-orange-600'>Socials</span>
             <div className='flex flex-col justify-center items-start gap-5 font-light'>
                 <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /> okike-plc</a>
                 <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://x.com/Okikeplc"><BsTwitterX /> okikeplc</a>
                 <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/okikestudio"><FaInstagram /> okikestudio</a>
                 <a className='flex justify-center items-center gap-2 hover:text-orange-600 transition duration-150' target='_blank' rel='noopener noreferrer' href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /> okikeplc</a>
-                
             </div>
         </div>
     </footer>
