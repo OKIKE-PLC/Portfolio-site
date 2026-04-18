@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import bgImg2 from "../assets/Container.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -38,6 +39,19 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  const [activeCard, setActiveCard] = useState(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      // If we didn't click inside a project card, reset the active card.
+      if (!e.target.closest(".project-card")) {
+        setActiveCard(null);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, []);
+
   return (
     <motion.section 
       style={{ padding: "1.5rem" }}
@@ -72,28 +86,47 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.1 }}
-            className="relative h-[400px] mx-auto w-full group cursor-pointer overflow-hidden rounded-lg"
+            onClick={() => setActiveCard(project.id)}
+            className={`project-card relative h-[400px] mx-auto w-full group cursor-pointer overflow-hidden rounded-lg ${
+              activeCard === project.id ? "is-active" : ""
+            }`}
           >
             <img
               src={project.image}
               alt={project.title}
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover grayscale-0 md:grayscale transition-all duration-700 ease-in-out md:group-hover:grayscale-0 md:group-hover:scale-110"
+              className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out grayscale group-hover:grayscale-0 group-hover:scale-110 group-active:grayscale-0 group-active:scale-110 ${
+                activeCard === project.id ? "grayscale-0 scale-110" : ""
+              }`}
             />
 
             <div
-              className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 ease-in-out flex flex-col justify-end p-6 md:p-8"
+              className={`absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-700 ease-in-out flex flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 group-active:opacity-100 ${
+                activeCard === project.id ? "opacity-100" : ""
+              }`}
               style={{ padding: ".5rem" }}
             >
-              <p className="text-xs font-semibold tracking-wider text-orange-500 uppercase mb-2 transform translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-700 ease-out">
+              <p
+                className={`text-xs font-semibold tracking-wider text-orange-500 uppercase mb-2 transform transition-transform duration-700 ease-out translate-y-8 group-hover:translate-y-0 group-active:translate-y-0 ${
+                  activeCard === project.id ? "translate-y-0" : ""
+                }`}
+              >
                 {project.category}
               </p>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white leading-tight mb-4 transform translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-700 ease-out md:delay-100">
+              <h3
+                className={`text-xl md:text-2xl font-bold text-white leading-tight mb-4 transform transition-transform duration-700 ease-out delay-100 translate-y-8 group-hover:translate-y-0 group-active:translate-y-0 ${
+                  activeCard === project.id ? "translate-y-0" : ""
+                }`}
+              >
                 {project.title}
               </h3>
 
-              <div className="transform translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-700 ease-out md:delay-200">
+              <div
+                className={`transform transition-transform duration-700 ease-out delay-200 translate-y-8 group-hover:translate-y-0 group-active:translate-y-0 ${
+                  activeCard === project.id ? "translate-y-0" : ""
+                }`}
+              >
                 <Link
                   to="/portfolio/residential"
                   className="inline-block text-white text-sm font-medium border-b-2 border-orange-500 pb-1 hover:text-orange-400 hover:border-orange-400 transition-colors"
