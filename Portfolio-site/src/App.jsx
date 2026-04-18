@@ -8,11 +8,13 @@ import Residential from './pages/residential';
 import './App.css';
 import Navbar from './components/navbar';
 import Footer from "./components/footer";
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
   
     <Router>
+      <ScrollToTop />
       <Navbar />
       <main className="mx-auto w-full">
         <Routes>
