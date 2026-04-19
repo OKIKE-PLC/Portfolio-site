@@ -1,5 +1,4 @@
 import residential from '../assets/residential.png';
-
 import Shield from '../assets/Icon.svg';
 import './hero.css';
 import { motion } from "framer-motion";
