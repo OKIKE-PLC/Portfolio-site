@@ -39,12 +39,12 @@ export default function About() {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-            <div className="w-full md:w-1/2 flex flex-col justify-center items-start">
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
                 <img
             src={Sha_sha}
             alt="Sha-sha Ceo"
             loading="lazy"
-            className="w-full rounded-xl"
+            className=" rounded-xl"
             style={{ height: "35rem" }}
           />
             </div>

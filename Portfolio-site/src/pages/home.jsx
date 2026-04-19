@@ -245,29 +245,10 @@ export default function Home() {
                     <h4 className="font-bold text-3xl md:4xl lg:6xl">Company Profile</h4>
                     <p className="text-xl md:text-2xl">OKIKE PLC is a Port Harcourt based design build firm specializing in the creation of high functioning and commercial spaces. Our team is defined as a group of professionals intentionally put together to form a system.</p>
                     <p className="text-xl md:text-2xl">We are proud of the trust earned through our commitment to transparency, discipline, and the mastery of the built environment</p>
-
-                    {/* <div className="flex flex-col lg:flex-row gap-6 w-full">
-                        <div className="w-1/2">
-                            <h5 className="text-3xl font-bold">500+</h5>
-                            <p className="text-xl">Projects Completed</p>
-                        </div>
-                        <div className="w-1/2">
-                            <h5 className="text-3xl font-bold">500+</h5>
-                            <p className="text-xl">Projects Completed</p>
-                        </div>
-                    </div> */}
                 </div>
                 
             </motion.section>
-
-           
-
             <Partner />
-            
-            
-            
-            
-
         </>
     )
 }
