@@ -10,6 +10,31 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #EA580C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fcf9f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EA580C;
+}
+
+::selection {
+  background: #EA580C; /* Change background color */
+  color: #131313;      /* Change text color */
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #EA580C;
+}
+
+
 /* body {
   padding: 0 2rem;
 } */
@@ -20,6 +45,10 @@ html {
     font-family: 'Supreme', sans-serif;
     @apply bg-[#F5F2ED] text-[#1C1C19];
   }
+
+  /* #root {
+    @apply max-w-[1440px];
+  } */
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Chubbo', sans-serif;

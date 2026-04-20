@@ -30,8 +30,8 @@ export default function Navbar() {
   return (
     <section
       ref={navRef}
-      className="sticky top-0 z-50  backdrop-blur-sm flex justify-between items-center"
-      style={{ padding: "1rem" }}
+      className="sticky top-0 z-50 max-w-[1440px]  backdrop-blur-sm flex justify-between items-center"
+      style={{ padding: "1rem", margin: "0 auto" }}
     >
       <Link to="/">
         <img src={darkLogo} alt="Okike Logo" width={60} />

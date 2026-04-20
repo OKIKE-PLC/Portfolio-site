@@ -25,9 +25,9 @@ export default function Home() {
         <>
            
             {/* hero section */}
-            <header className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"} }>
+            <header className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"}}>
                 {/* hero text div */}
-            <motion.section className="content flex  flex-col justify-center items-start md:items-center text-left  md:text-center" 
+            <motion.section className="content marginAuto flex  flex-col justify-center items-start md:items-center text-left  md:text-center"
                     initial={{ opacity: 0,
                                x: -100
                              }}
@@ -74,7 +74,7 @@ export default function Home() {
             {/* services we offer section */}
 
             <motion.section 
-                className="cards flex flex-col gap-5 service"
+                className="cards flex flex-col gap-5 service marginAuto"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
@@ -188,40 +188,42 @@ export default function Home() {
 
             {/* best projects section */}
             <motion.section 
-                className="projects bg-[#edeae5] flex flex-col gap-5 "
+                className="projects bg-[#edeae5] flex flex-col gap-5"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             >
                 {/* selected works text */}
-                <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end ">
-                    <div className="flex flex-col justify-center items-baseline">
-                        <p className="text-orange-600 text-sm md:text-xl">Selected Works</p>
-                        <h3 className="text-2xl md:text-4xl font-semibold">The <span className="text-orange-600  italic">Interior</span> Series</h3>
+                <div className='marginAuto'>
+                        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end ">
+                        <div className="flex flex-col justify-center items-baseline">
+                            <p className="text-orange-600 text-sm md:text-xl">Selected Works</p>
+                            <h3 className="text-2xl md:text-4xl font-semibold">The <span className="text-orange-600  italic">Interior</span> Series</h3>
+                        </div>
+                        <Link className='hover:text-orange-600 hover:text-xl transition-all duration-300' to="/portfolio">View our works</Link>
                     </div>
-                    <Link className='hover:text-orange-600 hover:text-xl transition-all duration-300' to="/portfolio">View our works</Link>
-                </div>
-                {/* selected works cards */}
-                <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5" style={{padding: "1.5rem 0"}}>
-                    <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
-                        <img className="w-full rounded-xl" src={BeachHouse} alt="Beach house 3D interior" loading="lazy"/>
-                        <h4 className="text-orange-600 font-bold text-xl">Beach House 3D Visualization</h4>
-                        <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
+                    {/* selected works cards */}
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5" style={{padding: "1.5rem 0"}}>
+                        <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
+                            <img className="w-full rounded-xl" src={BeachHouse} alt="Beach house 3D interior" loading="lazy"/>
+                            <h4 className="text-orange-600 font-bold text-xl">Beach House 3D Visualization</h4>
+                            <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
 
-                    </div>
-                    <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
-                        <img className="w-full rounded-xl" src={rooftop} alt="rooftop mural" loading="lazy" />
-                        <h4 className="text-orange-600 font-bold text-xl">Rooftop Mural</h4>
-                        <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
-                    </div>
-                </div>  
+                        </div>
+                        <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
+                            <img className="w-full rounded-xl" src={rooftop} alt="rooftop mural" loading="lazy" />
+                            <h4 className="text-orange-600 font-bold text-xl">Rooftop Mural</h4>
+                            <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
+                        </div>
+                    </div>  
+                </div>
             </motion.section>
                             {/* process */}
                 <motion.section 
                     id='process' 
-                    className='flex flex-col w-full justify-center items-start gap-2.5' 
-                    style={{padding: ' 4rem 1rem'}}
+                    className='flex flex-col w-full justify-center items-start gap-2.5 max-w-[1440px]'
+                    style={{padding: ' 4rem 1rem', margin: "0 auto"}}
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -233,18 +235,20 @@ export default function Home() {
            
             {/* Our legacy section */}
             <motion.section 
-                className="legacy flex flex-col lg:flex-row justify-center items-center gap-5"
+                className="legacy"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
             >
-                <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2 rounded-md" loading="lazy" />
+                <div className="legacy flex flex-col lg:flex-row justify-center items-center gap-5 max-w-[1440px]" style={{margin: "0 auto"}}>
+                    <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2 rounded-md" loading="lazy" />
                 <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
                     <span className="font-semibold text-xl text-orange-600">Our Legacy</span>
                     <h4 className="font-bold text-3xl md:4xl lg:6xl">Company Profile</h4>
                     <p className="text-xl md:text-2xl">OKIKE PLC is a Port Harcourt based design build firm specializing in the creation of high functioning and commercial spaces. Our team is defined as a group of professionals intentionally put together to form a system.</p>
                     <p className="text-xl md:text-2xl">We are proud of the trust earned through our commitment to transparency, discipline, and the mastery of the built environment</p>
+                </div>
                 </div>
                 
             </motion.section>

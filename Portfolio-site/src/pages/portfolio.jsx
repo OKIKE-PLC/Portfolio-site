@@ -46,7 +46,7 @@ export default function Portfolio() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
-      <div className="flex flex-col justify-center items-start gap-3">
+      <div className="flex flex-col justify-center items-start gap-3 marginAuto">
         <span className="text-orange-600 font-light">
           - EXCELLENCE IN FABRICATION
         </span>
@@ -63,7 +63,7 @@ export default function Portfolio() {
       {/* projects div */}
 
       <div
-        className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8 "
+        className="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8 marginAuto"
         style={{ marginTop: "1rem" }}
       >
         {projects.map((project, index) => (
@@ -73,7 +73,7 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: index * 0.1 }}
-            className="project-card relative h-[400px] mx-auto w-full group overflow-hidden rounded-lg"
+            className="  project-card relative h-[400px] mx-auto w-full group overflow-hidden rounded-lg"
           >
             <img
               src={project.image}

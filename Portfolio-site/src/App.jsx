@@ -17,7 +17,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
-      <main className="mx-auto w-full">
+      <main >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />

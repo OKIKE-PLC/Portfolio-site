@@ -1,7 +1,7 @@
 export default function Process() {
     return (
-        <div>
+        <section>
             <h1>Our Process</h1>
-        </div>
+        </section>
     )
 }

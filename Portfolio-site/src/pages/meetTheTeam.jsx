@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import Partner from '../components/partner';
-import bgImg2 from "../assets/Container.png";
+// import bgImg2 from "../assets/Container.png";
 import Laurel from '../assets/Laurel-3.png';
 import Sha_sha from "../assets/Sha-Sha.png";
 
 export default function MeetTheTeam() {
     return (
             <section>
-                <motion.header
+                {/* <motion.header
                     className="hero flex flex-col justify-end items-start h-screen w-screen bg-cover bg-no-repeat bg-center"
                     style={{ backgroundImage: `url('${bgImg2}')`, padding: "0 1rem" }}
                     initial={{ opacity: 0 }}
@@ -23,7 +23,7 @@ export default function MeetTheTeam() {
                             The Visionaries Behind the Structure
                         </h1>
                     </div>
-                </motion.header>
+                </motion.header> */}
 
                 {/* visionaries */}
                 <section className='flex flex-col justify-center items-center bg-stone-900 text-zinc-200 gap-2' style={{ padding: "1rem" }}>

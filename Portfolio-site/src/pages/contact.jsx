@@ -20,6 +20,29 @@ export default function Contact() {
     }));
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Replace with your actual API key
+    const accessKey = "sf_d34e833acb2457f4b3e2abd0"; 
+
+    try {
+      const response = await fetch("https://api.staticforms.dev/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, accessKey } ),
+      });
+
+      if (response.ok) {
+        alert("Success! We'll be in touch soon.");
+        setFormData({ name: "", email: "", service: "", message: "" });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+    }
+  };
+
   return (
     <motion.section 
       className="mx-auto" 
@@ -29,7 +52,7 @@ export default function Contact() {
       transition={{ duration: 0.7, ease: "easeOut" }}
     >
       {/* main contact div */}
-      <div className="flex flex-col md:flex-row justify-center items-start gap-5">
+      <div className="flex flex-col md:flex-row justify-center items-start gap-5 marginAuto">
         {/* left div */}
         <div className="flex flex-col justify-center items-start gap-5 text-left md:w-1/2">
           <h1 className="text-orange-600 font-light text-xl lg:text-2xl">
@@ -52,7 +75,7 @@ export default function Contact() {
               <MdOutlineEmail className="text-orange-600 font-bold text-3xl" />
               <div className="flex flex-col justify-center items-start gap-2">
                 <h3>Inquiries</h3>
-                <a href="mailto:info@okikeplc.com">info@okikeplc.com</a>
+                <a href="mailto:okikestudio@okikeplc.com">okikestudio@okikeplc.com</a>
               </div>
             </div>
           </div>
@@ -62,12 +85,13 @@ export default function Contact() {
           <h3 className="text-orange-600 font-light text-xl lg:text-2xl">
             Project Brief
           </h3>
-          <form className="space-y-5 flex flex-col justify-center w-full items-start gap-3">
+          <form className="space-y-5 flex flex-col justify-center w-full items-start gap-3" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
+
               placeholder="Full name"
               className="w-full border border-stone-300 rounded-xl px-4 py-3 outline-none focus:border-orange-600"
               required
