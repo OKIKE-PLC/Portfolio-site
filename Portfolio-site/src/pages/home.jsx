@@ -4,7 +4,6 @@ import BeachHouse from '../assets/Beach_house_3D-interior.jpg';
 import rooftop from '../assets/rooftop-mural.JPG';
 import Compass from '../assets/Container.svg';
 import Laurel from '../assets/Laurel-3.png';
-// import Consultation from '../assets/consultation.png'
 import { Link } from 'react-router-dom';
 import Partner from '../components/partner';
 import { motion } from "framer-motion";
@@ -20,10 +19,8 @@ import { HiSquare3Stack3D } from "react-icons/hi2";
 import FabCards from '../components/fabricationCards';
 
 export default function Home() {
-    return (
-        
+    return (  
         <>
-           
             {/* hero section */}
             <header className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${bgImg}')`, padding: "0 1rem" }}>
                 {/* hero text div */}
@@ -35,7 +32,7 @@ export default function Home() {
                               x:0
                              }}
                     transition={{ 
-                        type: "spring", 
+                        // type: "spring", 
                         stiffness: 70,  
                         damping: 20,
                         duration: 0.8
@@ -45,7 +42,7 @@ export default function Home() {
                 <motion.h1 
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }} 
-                    transition={{ delay: 0.3 }}
+                    transition={{ delay: 0.4, stiffness: 70,  damping: 20, duration: 0.8 }}
                     className=' text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold font-chubbo  m-5'>Interior Design . 3D Visualization . Construction</motion.h1>
                 <p className="md:text-2xl max-w-sm md:max-w-3xl text-orange-600 italic">Turning Spaces into Stories
                 </p>
@@ -241,7 +238,7 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
             >
-                <div className="legacy flex flex-col lg:flex-row justify-center items-center gap-5 max-w-[1440px]" style={{margin: "0 auto"}}>
+                <div className=" flex flex-col lg:flex-row justify-center items-center gap-5 max-w-[1440px]" style={{margin: "0 auto"}}>
                     <img src={Laurel} alt="Mrs Laurel" className="lg:w-1/2 rounded-md" loading="lazy" />
                 <div className="flex flex-col justify-center gap-6 items-start" style={{padding: "0 .6rem"}}>
                     <span className="font-semibold text-xl text-orange-600">Our Legacy</span>
