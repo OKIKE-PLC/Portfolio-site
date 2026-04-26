@@ -51,13 +51,13 @@ export default function MeetTheTeam() {
                 </section>
 
                 {/*creative engines  */}
-                <section className='flex flex-col justify-center items-center gap-2' style={{ padding: "1rem" }}> 
+                {/* <section className='flex flex-col justify-center items-center gap-2' style={{ padding: "1rem" }}> 
                     <div className='flex flex-col justify-center items-center'>
                         <div className='flex flex-col justify-center self-start gap-2'>
                             <p className='text-orange-600'>Creative Engine</p>
                             <h2 className='text-4xl font-bold'>The Visionaries Behind the Structure</h2>
                         </div>
-                        {/* creative engine imgs */}
+                        
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
                             <div className='flex flex-col justify-center items-center gap-2'>
                                 <img src={Sha_sha} alt="Ceo/Founder of Okike Plc" style={{ height: '30rem' }} />
@@ -89,7 +89,7 @@ export default function MeetTheTeam() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 <Partner />
             </section>
 

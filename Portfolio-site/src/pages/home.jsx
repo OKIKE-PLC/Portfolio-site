@@ -25,7 +25,7 @@ export default function Home() {
         <>
            
             {/* hero section */}
-            <header className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url('${bgImg}')`, padding: "0 1rem"}}>
+            <header className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${bgImg}')`, padding: "0 1rem" }}>
                 {/* hero text div */}
             <motion.section className="content marginAuto flex  flex-col justify-center items-start md:items-center text-left  md:text-center"
                     initial={{ opacity: 0,

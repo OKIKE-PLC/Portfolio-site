@@ -12,7 +12,7 @@ export default function About() {
       {/* header section */}
       <motion.header
         className="hero flex flex-col  md:justify-center justify-end items-start md:items-center h-screen w-screen bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: `url('${bgImg2}')`, padding: "0 1rem" }}
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${bgImg2}')`, padding: "0 1rem" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
