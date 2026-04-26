@@ -22,8 +22,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Replace with your actual API key
-    const accessKey = "sf_d34e833acb2457f4b3e2abd0"; 
+    const accessKey = "sf_7a61f149d6fa443daaea459b"; 
 
     try {
       const response = await fetch("https://api.staticforms.dev/submit", {

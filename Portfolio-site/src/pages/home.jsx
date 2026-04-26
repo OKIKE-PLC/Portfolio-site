@@ -43,8 +43,8 @@ export default function Home() {
                     >
                    
                 <motion.h1 
-                    initial={{ opacity: 0, y: -100 }}
-                    animate={{ opacity: 1, y: 0 }} 
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }} 
                     transition={{ delay: 0.3 }}
                     className=' text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold font-chubbo  m-5'>Interior Design . 3D Visualization . Construction</motion.h1>
                 <p className="md:text-2xl max-w-sm md:max-w-3xl text-orange-600 italic">Turning Spaces into Stories
