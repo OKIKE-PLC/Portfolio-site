@@ -113,7 +113,7 @@ export default function Navbar() {
         }`}
       >
         <nav 
-          className="flex flex-col gap-4 items-center bg-stone-900" 
+          className="flex flex-col gap-4 items-center bg-stone-900 w-full sticky top-16 z-50" 
           style={{padding: "1rem"}}
           onClick={() => setIsMobileMenuOpen(false)}
         >
