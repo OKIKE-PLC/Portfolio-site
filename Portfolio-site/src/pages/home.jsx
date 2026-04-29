@@ -38,6 +38,7 @@ export default function Home() {
                         duration: 0.8
                             }}
                     >
+                        <p className="flex justify-center items-center text-orange-600 text-xl font-semibold sm:text-center before:content-[''] before:w-25 before:h-[5px] before:rounded-full before:bg-orange-600 before:mr-2 after:content-[''] after:w-25 after:h-[5px] after:rounded-full after:bg-orange-600 after:ml-2">Design . Build . Renovate</p>
                    
                 <motion.h1 
                     initial={{ opacity: 0, x: -100 }}
@@ -52,7 +53,7 @@ export default function Home() {
                     {/* view projects cta btn */}
                     <Link to="/portfolio" className='bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-800 transition duration-300 md:w-1/2'  style={{padding: "12px 25px", width: "100%"}}>View Projects</Link>
                     {/* contact us btn */}
-                    <Link to="/contact" className='text-stone-200 rounded-xl border-stone-100 border-2 hover:bg-orange-800 transition duration-300 md:w-1/2' style={{padding: "12px 32px", width: "100%"}}>Contact Us</Link>
+                    <Link to="/contact" className='rounded-xl bg-transparent text-orange-600 border-orange-600 border-2 hover:bg-orange-600 hover:text-stone-100 transition duration-300 md:w-1/2' style={{padding: "12px 32px", width: "100%"}}>Contact Us</Link>
                 </div>
                         {/* socials */}
            
@@ -86,10 +87,10 @@ export default function Home() {
                     {/* individual cards */}
 
                     {/* architectural design and planning */}
-                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#1C1C19] flex flex-col justify-center items-start  gap-2">
                         <span className="text-orange-600  text-2xl font-bold">01</span>
                         <h4 className="text-2xl font-bold">Architectural Design and Planning</h4>
-                        <p className="text-[#1C1C19] font-light">The "Brain" of the project. We provide comprehensive technical blueprints including:
+                        <p className="text-[#E5E2DD] font-light">The "Brain" of the project. We provide comprehensive technical blueprints including:
                             <ul className="list-disc list-inside">
                                 <li>Space Planning and Elevations</li>
                                 <li>Landscape and Interior Architectural Designs</li>
@@ -104,10 +105,10 @@ export default function Home() {
                     </article>
 
                     {/* interior millwork and fabrication */}
-                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#1C1C19] flex flex-col justify-center items-start  gap-2">
                         <span className="text-orange-600  text-2xl font-bold">02</span>
                         <h4 className="text-2xl font-bold">Interior Millwork and Fabrication</h4>
-                        <p className="text-[#1C1C19] font-light">Where design meets the "Hands". Custom Craftmanship for environments that feel genuinely yours:
+                        <p className="text-[#E5E2DD] font-light">Where design meets the "Hands". Custom Craftmanship for environments that feel genuinely yours:
                             <ul className="list-disc list-inside">
                                 <li>Bespoke Interior Doors and Cabinetry</li>
                                 <li>Custom Dining Sets and Couches.</li>
@@ -115,17 +116,17 @@ export default function Home() {
                             </ul>
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <HiWrenchScrewdriver />
+                            <HiWrenchScrewdriver  className='text-orange-600'/>
                         
                         </div>
                         
                     </article>
 
                     {/* building construction and project management */}
-                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#1C1C19] flex flex-col justify-center items-start  gap-2">
                         <span className="text-orange-600  text-2xl font-bold">03</span>
                         <h4 className="text-2xl font-bold">Building Construction and Project Management</h4>
-                        <p className="text-[#1C1C19] font-light">The "Machinery" in motion. We manage the entire life cycle of a build from start to finish:
+                        <p className="text-[#E5E2DD] font-light">The "Machinery" in motion. We manage the entire life cycle of a build from start to finish:
                             <ul className="list-disc list-inside">
                                 <li>Residential and Commercial Development.</li>
                                 <li>Onsite Operational Supervision.</li>
@@ -133,17 +134,17 @@ export default function Home() {
                             </ul>
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <LuBuilding2 />
+                            <LuBuilding2  className='text-orange-600'/>
                         {/* <Compass /> */}
                         </div>
                         
                     </article>
 
                     {/* paint production and services */}
-                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#1C1C19] flex flex-col justify-center items-start  gap-2">
                         <span className="text-orange-600  text-2xl font-bold">04</span>
                         <h4 className="text-2xl font-bold">Paint Production and Services</h4>
-                        <p className="text-[#1C1C19] font-light">The "Skin" of the structure. We produce and apply our property paint line:
+                        <p className="text-[#E5E2DD] font-light">The "Skin" of the structure. We produce and apply our property paint line:
                             <ul className="list-disc list-inside">
                                 <li>Professional Painting Services</li>
                                 <li>Custom "Handmade" paint production</li>
@@ -151,30 +152,30 @@ export default function Home() {
                             </ul>
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <GrPaint />
+                            <GrPaint className='text-orange-600'/>
                         </div>
                         
                     </article>
                     {/* deep cleaning */}
-                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#1C1C19] flex flex-col justify-center items-start  gap-2">
                         <span className="text-orange-600  text-2xl font-bold">05</span>
                         <h4 className="text-2xl font-bold">Deep Cleaning</h4>
-                        <p className="text-[#1C1C19] font-light">Construction is tough and messy. A home feels complete only after thorough cleanup removes all dust and debris, transforming the space from a construction site into a Sanctuary. We handle this final step ourselves, ensuring the chaos is cleared so the design can breathe.
+                        <p className="text-[#E5E2DD] font-light">Construction is tough and messy. A home feels complete only after thorough cleanup removes all dust and debris, transforming the space from a construction site into a Sanctuary. We handle this final step ourselves, ensuring the chaos is cleared so the design can breathe.
                             
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <MdCleaningServices />
+                            <MdCleaningServices className='text-orange-600'/>
                         </div>
                         
                     </article>
                     {/* 3d visualization */}
-                    <article className="card bg-[#E5E2DD] flex flex-col justify-center items-start  gap-2">
+                    <article className="card bg-[#1C1C19] flex flex-col justify-center items-start  gap-2">
                         <span className="text-orange-600  text-2xl font-bold">06</span>
                         <h4 className="text-2xl font-bold">3D Visualization</h4>
-                        <p className="text-[#1C1C19] font-light">We bring designs to life through photorealistic 3D renderings, allowing clients to visualize their future spaces with stunning clarity and detail.
+                        <p className="text-[#E5E2DD] font-light">We bring designs to life through photorealistic 3D renderings, allowing clients to visualize their future spaces with stunning clarity and detail.
                         </p>
                         <div className="img rounded-full border border-[#1C1C19]">
-                            <HiSquare3Stack3D />
+                            <HiSquare3Stack3D   className='text-orange-600'/>
                         {/* <Compass /> */}
                         </div>
                         
@@ -185,15 +186,15 @@ export default function Home() {
 
             {/* best projects section */}
             <motion.section 
-                className="projects bg-[#edeae5] flex flex-col gap-5"
+                className="projects bg-[#1C1C19] flex flex-col gap-5"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             >
                 {/* selected works text */}
-                <div className='marginAuto'>
-                        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end ">
+                <div className=''>
+                        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end marginAuto">
                         <div className="flex flex-col justify-center items-baseline">
                             <p className="text-orange-600 text-sm md:text-xl">Selected Works</p>
                             <h3 className="text-2xl md:text-4xl font-semibold">The <span className="text-orange-600  italic">Interior</span> Series</h3>
@@ -201,17 +202,17 @@ export default function Home() {
                         <Link className='hover:text-orange-600 hover:text-xl transition-all duration-300' to="/portfolio">View our works</Link>
                     </div>
                     {/* selected works cards */}
-                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5" style={{padding: "1.5rem 0"}}>
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5 marginAuto" style={{padding: "1.5rem 0"}}>
                         <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
                             <img className="w-full rounded-xl" src={BeachHouse} alt="Beach house 3D interior" loading="lazy"/>
                             <h4 className="text-orange-600 font-bold text-xl">Beach House 3D Visualization</h4>
-                            <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
+                            <p className="text-[#edeae5] font-light ">Lagos, Nigeria 2025</p>
 
                         </div>
                         <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
                             <img className="w-full rounded-xl" src={rooftop} alt="rooftop mural" loading="lazy" />
                             <h4 className="text-orange-600 font-bold text-xl">Rooftop Mural</h4>
-                            <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
+                            <p className="text-[#edeae5] font-light ">Lagos, Nigeria 2025</p>
                         </div>
                     </div>  
                 </div>

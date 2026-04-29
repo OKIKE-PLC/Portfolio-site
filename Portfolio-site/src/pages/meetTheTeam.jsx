@@ -26,7 +26,7 @@ export default function MeetTheTeam() {
                 </motion.header> */}
 
                 {/* visionaries */}
-                <section className='flex flex-col justify-center items-center bg-stone-900 text-zinc-200 gap-2' style={{ padding: "1rem" }}>
+                <section className='flex flex-col justify-center items-center bg-stone-900 text-zinc-200 gap-2' style={{ padding: "5.5rem 1rem" }}>
                     <div className='flex flex-col justify-center self-start gap-2'>
                         <p className='text-orange-600'>Visionaries</p>
                         <h2 className='text-4xl font-bold'>The Visionaries Behind the Structure</h2>

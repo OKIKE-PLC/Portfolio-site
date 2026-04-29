@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
-import darkLogo from "../assets/(PLC)-Dark-Logo.png";
+import lightLogo from "../assets/(PLC)_Light-Logo.png";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
 
   const toggleMobileMenu = () => {
@@ -27,23 +28,31 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section
       ref={navRef}
-      className="sticky top-0 z-50 max-w-[1440px]  backdrop-blur-sm flex justify-between items-center"
+      className={`fixed top-0 left-0 right-0 z-50 max-w-[1440px] flex justify-between items-center transition-all duration-300 bg-transparent text-stone-100 backdrop-blur-sm`}
       style={{ padding: "1rem", margin: "0 auto" }}
     >
       <Link to="/">
-        <img src={darkLogo} alt="Okike Logo" width={60} />
+        <img src={lightLogo} alt="Okike Logo" width={70} />
       </Link>
       <nav className="hidden md:flex justify-center items-center gap-3 text-sm ">
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
+            `rounded-lg transition-all duration-300 ease-in-out ${
               isActive
                 ? "bg-orange-600 text-stone-100 font-medium"
-                : "hover:bg-orange-200 hover:text-orange-700"
+                : `hover:bg-orange-200 hover:text-orange-700 ${isScrolled ? "text-orange-600" : "text-stone-100"}`
             }`
           } style={{ padding: ".5rem 1rem" }}
         >
@@ -55,7 +64,7 @@ export default function Navbar() {
             `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
               isActive
                 ? "bg-orange-600 text-stone-100 font-medium"
-                : "hover:bg-orange-200 hover:text-orange-700"
+                : `hover:bg-orange-200 hover:text-orange-700 ${isScrolled ? "text-orange-600" : "text-stone-100"}`
             }`
           } style={{ padding: ".5rem 1rem" }}
         >
@@ -67,7 +76,7 @@ export default function Navbar() {
             `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
               isActive
                 ? "bg-orange-600 text-stone-100 font-medium"
-                : "hover:bg-orange-200 hover:text-orange-700"
+                : `hover:bg-orange-200 hover:text-orange-700 ${isScrolled ? "text-orange-600" : "text-stone-100"}`
             }`
           } style={{ padding: ".5rem 1rem" }}
         >
@@ -79,7 +88,7 @@ export default function Navbar() {
             `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
               isActive
                 ? "bg-orange-600 text-stone-100 font-medium"
-                : "hover:bg-orange-200 hover:text-orange-700"
+                : `hover:bg-orange-200 hover:text-orange-700 ${isScrolled ? "text-orange-600" : "text-stone-100"}`
             }`
           } style={{ padding: ".5rem 1rem" }}
         >
@@ -100,7 +109,7 @@ export default function Navbar() {
       {/* mobile navigation visible only on mobile */}
       <button
         onClick={toggleMobileMenu}
-        className="md:hidden text-3xl p-2 z-50"
+        className={`md:hidden text-3xl p-2 z-50 transition-colors duration-300 ${isScrolled ? "text-orange-600" : "text-stone-100"}`}
       >
         <RiMenu4Line />
       </button>

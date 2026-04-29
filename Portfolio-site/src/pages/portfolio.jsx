@@ -41,12 +41,13 @@ export default function Portfolio() {
 
   return (
     <motion.section 
-      style={{ padding: "1.5rem" }}
+      style={{ padding: "5.5rem 1.5rem" }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
+      className="marginAuto"
     >
-      <div className="flex flex-col justify-center items-start gap-3 marginAuto">
+      <div className="flex flex-col justify-center items-start gap-3 ">
         <span className="text-orange-600 font-light">
           - EXCELLENCE IN FABRICATION
         </span>

@@ -7,72 +7,73 @@ const cards = [
     image: Compass,
     header: "Lead Capture & Pre-qualification",
     text: "Identifying the right fit for the system",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "#edeae5",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 2,
     image: Compass,
     header: "Site Inspection",
     text: "Evaluating the ground and the goal",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "zinc-300",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 3,
     image: Compass,
     header: "Design Documentation",
     text: "Creating the Office Brain (Drawings & CGIs)",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "#edeae5",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 4,
     image: Compass,
     header: "Quotation & Contract",
     text: "Legal and financial alignment",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "",
+    background: "bg-[#1C1C19]",
+
   },
   {
     id: 5,
     image: Compass,
     header: "Mobilization",
     text: "Moving the machinery and materials to the field",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 6,
     image: Compass,
     header: "Procurement",
     text: "Sourcing quality components for the build.",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 7,
     image: Compass,
     header: "Execution & Supervision",
     text: "Daily safety checks and progress logs",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 8,
     image: Compass,
     header: "Quality Control (QC) Routine",
     text: "Verifying workmanship at every milestone",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "",
+    background: "bg-[#1C1C19]",
   },
   {
     id: 9,
     image: Compass,
     header: "Handover & Aftercare",
     text: "Final inspection and long-term support",
-    color: "bg-[#907067]",
-    background: "bg-[#E5E2DD]",
+    color: "",
+    background: "bg-[#1C1C19]",
   },
 ];
 
@@ -101,7 +102,7 @@ export default function FabCards() {
           <h4 className="text-xl font-bold text-orange-900 mt-2">
             {card.header}
           </h4>
-          <p className="text-[#1C1C19] font-light">{card.text}</p>
+          <p className="text-[#edeae5] font-light">{card.text}</p>
         </motion.div>
       ))}
     </motion.section>
