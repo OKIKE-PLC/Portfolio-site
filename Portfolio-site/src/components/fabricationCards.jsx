@@ -1,78 +1,87 @@
-import Compass from "../assets/Container.svg";
 import { motion } from "framer-motion";
+import {
+  LuUserSearch,
+  LuMapPinCheck,
+  LuFileText,
+  LuSignature,
+  LuTruck,
+  LuShoppingCart,
+  LuHardHat,
+  LuClipboardCheck,
+  LuKey
+} from "react-icons/lu";
 
 const cards = [
   {
     id: 1,
-    image: Compass,
+    icon: LuUserSearch,
+    subtitle: "THE INITIATION",
     header: "Lead Capture & Pre-qualification",
     text: "Identifying the right fit for the system",
-    color: "#edeae5",
     background: "bg-[#1C1C19]",
   },
   {
     id: 2,
-    image: Compass,
+    icon: LuMapPinCheck,
+    subtitle: "THE GROUNDWORK",
     header: "Site Inspection",
     text: "Evaluating the ground and the goal",
-    color: "zinc-300",
     background: "bg-[#1C1C19]",
   },
   {
     id: 3,
-    image: Compass,
+    icon: LuFileText,
+    subtitle: "THE BLUEPRINT",
     header: "Design Documentation",
     text: "Creating the Office Brain (Drawings & CGIs)",
-    color: "#edeae5",
     background: "bg-[#1C1C19]",
   },
   {
     id: 4,
-    image: Compass,
+    icon: LuSignature,
+    subtitle: "THE AGREEMENT",
     header: "Quotation & Contract",
     text: "Legal and financial alignment",
-    color: "",
     background: "bg-[#1C1C19]",
-
   },
   {
     id: 5,
-    image: Compass,
+    icon: LuTruck,
+    subtitle: "THE DEPLOYMENT",
     header: "Mobilization",
     text: "Moving the machinery and materials to the field",
-    color: "",
     background: "bg-[#1C1C19]",
   },
   {
     id: 6,
-    image: Compass,
+    icon: LuShoppingCart,
+    subtitle: "THE SOURCING",
     header: "Procurement",
     text: "Sourcing quality components for the build.",
-    color: "",
     background: "bg-[#1C1C19]",
   },
   {
     id: 7,
-    image: Compass,
+    icon: LuHardHat,
+    subtitle: "THE BUILD",
     header: "Execution & Supervision",
     text: "Daily safety checks and progress logs",
-    color: "",
     background: "bg-[#1C1C19]",
   },
   {
     id: 8,
-    image: Compass,
+    icon: LuClipboardCheck,
+    subtitle: "THE ASSURANCE",
     header: "Quality Control (QC) Routine",
     text: "Verifying workmanship at every milestone",
-    color: "",
     background: "bg-[#1C1C19]",
   },
   {
     id: 9,
-    image: Compass,
+    icon: LuKey,
+    subtitle: "THE LEGACY",
     header: "Handover & Aftercare",
     text: "Final inspection and long-term support",
-    color: "",
     background: "bg-[#1C1C19]",
   },
 ];
@@ -80,7 +89,7 @@ const cards = [
 export default function FabCards() {
   return (
     <motion.section 
-      className="flex md:flex-row flex-col flex-wrap justify-center md:items-start items-center gap-6 w-full"
+      className="flex md:flex-row flex-col flex-wrap justify-center md:items-stretch items-center gap-6 w-full"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -93,16 +102,38 @@ export default function FabCards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-          className={`card ${card.background} md:w-[300px] md:h-[320px] w-full flex flex-col justify-start items-start gap-4 rounded-xl`}
-          style={{ padding: "1.5rem" }}
+          className={`border border-zinc-800 ${card.background} md:w-[360px] w-full flex flex-col justify-start items-start rounded-xl hover:border-zinc-600 transition-colors duration-300`}
+          style={{ padding: "2.5rem 2rem" }}
         >
-          <div className="img p-3 shrink-0 border rounded-full border-orange-600 flex justify-center items-center">
-            <img src={card.image} alt={card.header} className="w-8 h-8" loading="lazy" />
+          {/* Top Row: Small orange number and Large white number with icon */}
+          <div className="flex justify-between items-start w-full mb-8">
+            <span className="text-orange-600 text-xs tracking-[0.4em] font-semibold mt-2">
+              0 {card.id}
+            </span>
+            <div className="relative flex items-center justify-center">
+              <span className="text-7xl opacity-5 font-chubbo font-light text-zinc-400 leading-none tracking-tighter">
+                0{card.id}
+              </span>
+              <div className="absolute  hover:text-orange-600 md:right-[-8px] right-[14px] bottom-[4px] text-zinc-300">
+                <card.icon className="w-6 h-6 stroke-[1.5]" />
+              </div>
+            </div>
           </div>
-          <h4 className="text-xl font-bold text-orange-900 mt-2">
+
+          {/* Subtitle */}
+          <h5 className="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-semibold mb-3">
+            {card.subtitle}
+          </h5>
+
+          {/* Header */}
+          <h4 className="text-2xl font-bold text-white mb-4 leading-snug">
             {card.header}
           </h4>
-          <p className="text-[#edeae5] font-light">{card.text}</p>
+
+          {/* Paragraph */}
+          <p className="text-zinc-400 font-light text-sm leading-relaxed">
+            {card.text}
+          </p>
         </motion.div>
       ))}
     </motion.section>

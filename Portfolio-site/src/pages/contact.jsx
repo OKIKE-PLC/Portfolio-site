@@ -45,7 +45,7 @@ export default function Contact() {
   return (
     <motion.section 
       className="mx-auto" 
-      style={{ padding: "3rem 1rem" }}
+      style={{ padding: "5.5rem 1rem" }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
@@ -112,7 +112,7 @@ export default function Contact() {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full border border-stone-300 rounded-xl px-4 py-3 outline-none focus:border-orange-600"
+              className="w-full border bg-orange-600 border-stone-300 rounded-xl px-4 py-3 outline-none focus:border-orange-600"
               required
               style={{ padding: ".5rem" }}
             >

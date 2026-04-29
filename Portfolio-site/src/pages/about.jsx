@@ -3,6 +3,7 @@ import Sha_sha from "../assets/Sha-Sha.png";
 import Partner from "../components/partner";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { LuHouse, LuShieldCheck, LuSettings, LuPenTool } from "react-icons/lu";
 
 export default function About() {
   return (
@@ -19,7 +20,7 @@ export default function About() {
       >
         <div
           className="marginAuto flex flex-col justify-end items-start gap-2 z-10"
-          style={{ padding: "7rem 0" }}
+          style={{ padding: "2rem 0" }}
         >
           <p className="font-semibold text-orange-600 text-3xl">About Us</p>
           <h1 className="font-bold text-zinc-200 text-4xl md:text-5xl">
@@ -98,44 +99,48 @@ export default function About() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 " style={{ padding: " 0rem 1rem 3.5rem 1rem "}}>
                 {/* design for real life */}
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <h3 className="text-2xl font-bold text-orange-600">
+                <div className="flex flex-col justify-center items-start gap-2 border border-zinc-800  w-full rounded-xl hover:border-orange-600 transition-colors duration-300" style={{ borderRadius: " 1rem ", padding: " 3.5rem " }}>
+                  <LuHouse className="w-6 h-6 stroke-[2.5]" />
+                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
                     Design for Real Life:
                   </h3>
-                  <article className="text-xl font-light leading-relaxed">
+                  <article className="text-xl text-zinc-500 font-light leading-snug">
                     We believe spaces should support how people truly live and work.
                     Our designs consider movement, comfort, and daily habits to
                     create environments that feel natural and easy to use.
                   </article>
                 </div>
                 {/* radical responsibilty */}
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <h3 className="text-2xl font-bold text-orange-600">
+                <div className="flex flex-col justify-center items-start gap-2 border border-zinc-800 w-full rounded-xl hover:border-orange-600 transition-colors duration-300" style={{ borderRadius: " 1rem ", padding: " 3.5rem " }}>
+                  <LuShieldCheck className="w-6 h-6 stroke-[2.5]" />
+                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
                     Radical Responsibility:
                   </h3>
-                  <article className="text-xl font-light leading-relaxed">
+                  <article className="text-xl text-zinc-500 font-light leading-snug">
                     We own the outcome. We believe responsibility is the ability to
                     own the result of an action, whether good or bad. We deliver
                     results
                   </article>
                 </div>
                 {/* system-driven execution*/}
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <h3 className="text-2xl font-bold text-orange-600">
+                <div className="flex flex-col justify-center items-start gap-2 border border-zinc-800  w-full rounded-xl hover:border-orange-600 transition-colors duration-300" style={{ borderRadius: " 1rem ", padding: " 3.5rem " }}>
+                  <LuSettings className="w-6 h-6 stroke-[2.5]" />
+                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
                     System-Driven Execution:
                   </h3>
-                  <article className="text-xl font-light leading-relaxed">
+                  <article className="text-xl text-zinc-500 font-light leading-snug">
                     We don't rely on "luck" or "bursts of energy". We rely on a
                     structured operational framework that ensures every nail and
                     every brushstroke is documented and verified.
                   </article>
                 </div>
                 {/* integrity in craft */}
-                <div className="w-full flex flex-col justify-center items-start gap-2">
-                  <h3 className="text-2xl font-bold text-orange-600">
+                <div className="flex flex-col justify-center items-start gap-2 border border-zinc-800  w-full rounded-xl hover:border-orange-600 transition-colors duration-300" style={{ borderRadius: " 1rem ", padding: " 3.5rem " }}>
+                  <LuPenTool className="w-6 h-6 stroke-[2.5]" />
+                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
                     Integrity in Craft:
                   </h3>
-                  <article className="text-xl font-light leading-relaxed">
+                  <article className="text-xl text-zinc-500 font-light leading-snug">
                     We maintain a "Learning Loop". Our humility allows us to
                     consistently refine our craft, ensuring that our "Master" mind
                     always has control over the technical execution.
@@ -144,7 +149,7 @@ export default function About() {
               
               </div>
               <div className="w-full flex flex-col justify-center items-center" style={{padding: "2rem 0rem"}}>
-                  <Link to="/about/meet-the-team" className="bg-orange-600 rounded-xl" style={{padding: "1rem"}}>Meet The Team</Link>
+                  <Link to="/about/meet-the-team" className="bg-orange-600 rounded-xl" style={{padding: "2rem 5rem"}}>Meet The Team</Link>
                 </div>
           </div>
         </motion.section>
