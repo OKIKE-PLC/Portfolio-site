@@ -40,14 +40,16 @@ const projects = [
 export default function Portfolio() {
 
   return (
-    <motion.section 
+    <section 
       style={{ padding: "5.5rem 1.5rem" }}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
       className="marginAuto"
     >
-      <div className="flex flex-col justify-center items-start gap-3 ">
+      <motion.div 
+        className="flex flex-col justify-center items-start gap-3 "
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <span className="text-orange-600 font-light">
           - EXCELLENCE IN FABRICATION
         </span>
@@ -59,7 +61,7 @@ export default function Portfolio() {
           monolith is a testament to our commitment to structural permanence and
           aesthetic clarity.
         </p>
-      </div>
+      </motion.div>
 
       {/* projects div */}
 
@@ -113,6 +115,6 @@ export default function Portfolio() {
           </motion.div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

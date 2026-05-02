@@ -88,12 +88,8 @@ const cards = [
 
 export default function FabCards() {
   return (
-    <motion.section 
+    <section 
       className="flex md:flex-row flex-col flex-wrap justify-center md:items-stretch items-center gap-6 w-full"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
     >
       {cards.map((card, index) => (
         <motion.div
@@ -136,6 +132,6 @@ export default function FabCards() {
           </p>
         </motion.div>
       ))}
-    </motion.section>
+    </section>
   );
 }

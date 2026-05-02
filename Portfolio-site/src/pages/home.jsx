@@ -186,7 +186,7 @@ export default function Home() {
 
             {/* best projects section */}
             <motion.section 
-                className="projects bg-[#1C1C19] flex flex-col gap-5"
+                className="projects bg-zinc-200 flex flex-col gap-5"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
@@ -197,22 +197,22 @@ export default function Home() {
                         <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end marginAuto">
                         <div className="flex flex-col justify-center items-baseline">
                             <p className="text-orange-600 text-sm md:text-xl">Selected Works</p>
-                            <h3 className="text-2xl md:text-4xl font-semibold">The <span className="text-orange-600  italic">Interior</span> Series</h3>
+                            <h3 className="text-2xl text-[#1C1C19]  md:text-4xl font-semibold">The <span className="text-orange-600  italic">Interior</span> Series</h3>
                         </div>
-                        <Link className='hover:text-orange-600 hover:text-xl transition-all duration-300' to="/portfolio">View our works</Link>
+                        <Link className='text-[#1C1C19] text-sm md:text-xl  font-semibold hover:text-orange-600 hover:text-2xl transition-all duration-300' to="/portfolio">View our works</Link>
                     </div>
                     {/* selected works cards */}
                     <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5 marginAuto" style={{padding: "1.5rem 0"}}>
                         <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
                             <img className="w-full rounded-xl" src={BeachHouse} alt="Beach house 3D interior" loading="lazy"/>
                             <h4 className="text-orange-600 font-bold text-xl">Beach House 3D Visualization</h4>
-                            <p className="text-[#edeae5] font-light ">Lagos, Nigeria 2025</p>
+                            <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
 
                         </div>
                         <div className="mb-5 w-full rounded-xl" style={{margin: "1.5rem 0", height: "30rem"}}>
                             <img className="w-full rounded-xl" src={rooftop} alt="rooftop mural" loading="lazy" />
                             <h4 className="text-orange-600 font-bold text-xl">Rooftop Mural</h4>
-                            <p className="text-[#edeae5] font-light ">Lagos, Nigeria 2025</p>
+                            <p className="text-[#1C1C19] font-light ">Lagos, Nigeria 2025</p>
                         </div>
                     </div>  
                 </div>

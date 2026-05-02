@@ -29,50 +29,73 @@ export default function Residential() {
                 <a href="#" className='text-sm md:text-xl font-bold hover:text-orange-600 '>RESULT</a>
             </nav> */}
 
-            <main>
+            <main className="max-w-[1440px] mx-auto w-full">
                 {/* Challenge */}
-                <motion.section 
+                <section 
                     id='challenge' 
                     className='flex flex-col lg:flex-row justify-between items-start gap-2.5' 
                     style={{padding: ' 2rem 0rem '}}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
                 >
-                    {/* challeneg txt */}
-                    <div className='flex flex-col justify-center items-start gap-2.5 w-full lg:w-1/2'>
+                    {/* challenge txt */}
+                    <motion.div 
+                        className='flex flex-col justify-center items-start gap-2.5 w-full lg:w-1/2'
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
                             <h4 className='text-orange-600 text-xl font-bold'>THE CHALLENGE</h4>
                             <p>The Lagos Waterfront presented a unique architectural paradox: the need for a structure that felt ephemeral and light while resisting the brutal corrosive power of a high-salinity coastal environment. The Atlantic mist and shifting sands created a site that was as volatile as it was beautiful.</p>
                         
-                    </div>
+                    </motion.div>
                     {/* residential img */}
-                    <div className='rounded-sm lg:rounded-xl object-contain w-full lg:w-1/2'>
+                    <motion.div 
+                        className='rounded-sm lg:rounded-xl object-contain w-full lg:w-1/2'
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+                    >
                         <img className='rounded-sm lg:rounded-xl w-full max-h-90 object-cover' src={residential} alt="residential building" />
-                    </div>
+                    </motion.div>
                     
-                </motion.section>
+                </section>
 
                 
                 {/* solution */}
-                <motion.section 
+                <section 
                     id="solution" 
                     className='flex flex-col md:flex-row justify-center items-start gap-2.5 ' 
                     style={{padding: ' 3.5rem 0rem '}}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
                 >
-                    <div className='flex flex-col justify-center items-start gap-2.5 w-full md:w-1/2'>
+                    <motion.div 
+                        className='flex flex-col justify-center items-start gap-2.5 w-full md:w-1/2'
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
                         <h3 className='text-orange-600 text-sm font-bold'>CONCEPTUAL CORE</h3>
                         <h4 className='text- font-bold'>Balancing visual lightness with extreme coastal durability.</h4>
                         <p className='font-light'>Our solution centered on a structural paradox. We developed a design language that evokes the transparency of the Atlantic mist while maintaining the tectonic strength of a fortress. The result is a 'living skin'—a pavilion that breathes with the wind but stands resolute against the salt-laden atmosphere.</p>
-                    </div>
+                    </motion.div>
                     {/* solution img */}
-                    <div className="rounded-xl object-contain flex flex-col  justify-center items-start w-full md:w-1/2 gap-3  border-0" style={{padding: "1rem .5rem"}}>
+                    <motion.div 
+                        className="rounded-xl object-contain flex flex-col  justify-center items-start w-full md:w-1/2 gap-3  border-0" 
+                        style={{padding: "1rem .5rem"}}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+                    >
                          <h3 className='text-orange-600 text-sm font-bold ' style={{marginBottom: "1rem"}}>MATERIAL INNOVATION</h3>
-                         <div className='flex justify-center items-start gap-2.5 '>
+                         <motion.div 
+                            className='flex justify-center items-start gap-2.5 '
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                         >
                             <div className='w-15 h-15 rounded-full flex justify-center items-start '>
                                 <img src={Shield} alt="" />
                             </div>
@@ -80,8 +103,14 @@ export default function Residential() {
                                 <h5 className='text-sm font-bold'>Marine-Grade Steel</h5>
                                 <p className='font-light'>High-performance alloy specifically treated for 50+ year lifespans in high-salinity zones.</p>
                             </div>
-                         </div>
-                         <div className='flex justify-center items-start gap-2.5 '>
+                         </motion.div>
+                         <motion.div 
+                            className='flex justify-center items-start gap-2.5 '
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
+                         >
                             <div className='w-15 h-15 rounded-full flex justify-center items-start '>
                                 <img src={Shield} alt="" />
                             </div>
@@ -89,8 +118,14 @@ export default function Residential() {
                                 <h5 className='text-sm font-bold'>Marine-Grade Steel</h5>
                                 <p className='font-light'>High-performance alloy specifically treated for 50+ year lifespans in high-salinity zones.</p>
                             </div>
-                         </div>
-                         <div className='flex justify-center items-start gap-2.5 '>
+                         </motion.div>
+                         <motion.div 
+                            className='flex justify-center items-start gap-2.5 '
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+                         >
                             <div className='w-15 h-15 rounded-full flex justify-center items-start '>
                                 <img src={Shield} alt="" />
                             </div>
@@ -98,32 +133,40 @@ export default function Residential() {
                                 <h5 className='text-sm font-bold'>Marine-Grade Steel</h5>
                                 <p className='font-light'>High-performance alloy specifically treated for 50+ year lifespans in high-salinity zones.</p>
                             </div>
-                         </div>
-                    </div>
-                </motion.section>
+                         </motion.div>
+                    </motion.div>
+                </section>
 
                 {/* results */}
-                <motion.section 
+                <section 
                     className='flex flex-col md:flex-row justify-center items-start gap-2.5' 
                     style={{padding: ' 3.5rem 0rem '}}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
                 >
                     
                     
-                        <div className='flex flex-col justify-center items-start gap-2.5 w-full md:w-1/2'>
+                        <motion.div 
+                            className='flex flex-col justify-center items-start gap-2.5 w-full md:w-1/2'
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                        >
                             <h4 className='text-orange-600 text-xl font-bold'>THE RESULT</h4>
                             <p>The Lagos Waterfront presented a unique architectural paradox: the need for a structure that felt ephemeral and light while resisting the brutal corrosive power of a high-salinity coastal environment. The Atlantic mist and shifting sands created a site that was as volatile as it was beautiful.</p>
                         
-                    </div>
+                    </motion.div>
                     {/* residential img */}
-                    <div className='rounded-sm lg:rounded-xl object-contain w-full lg:w-1/2'>
+                    <motion.div 
+                        className='rounded-sm lg:rounded-xl object-contain w-full lg:w-1/2'
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+                    >
                         <img className='rounded-sm lg:rounded-xl w-full max-h-90 object-cover' src={residential} alt="residential building" />
-                    </div>
+                    </motion.div>
                     
-                </motion.section>
+                </section>
             </main>
             
 

@@ -27,26 +27,43 @@ export default function MeetTheTeam() {
 
                 {/* visionaries */}
                 <section className='flex flex-col justify-center items-center bg-stone-900 text-zinc-200 gap-2' style={{ padding: "5.5rem 1rem" }}>
-                    <div className='flex flex-col justify-center self-start gap-2'>
+                    <motion.div 
+                        className='flex flex-col justify-center self-start gap-2'
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
                         <p className='text-orange-600'>Visionaries</p>
                         <h2 className='text-4xl font-bold'>The Visionaries Behind the Structure</h2>
-                    </div>
+                    </motion.div>
                     {/* visionary imgs */}
                     <div className='flex flex-col  md:flex-row  justify-between items-center gap-2 '>
-                        <div className='flex flex-col justify-center items-center gap-2'>
+                        <motion.div 
+                            className='flex flex-col justify-center items-center gap-2'
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                        >
                             <img src={Sha_sha} alt="Ceo/Founder of Okike Plc" style={{ height: '30rem' }} />
                             <div>
                                 <h2 className='text-2xl font-bold text-orange-600'>Mr Shalom</h2>
                                 <p className='text-xl  text-zinc-200  font-light'>Ceo/Founder</p>
                             </div>
-                        </div>
-                        <div className='flex flex-col justify-center items-center gap-2'>
+                        </motion.div>
+                        <motion.div 
+                            className='flex flex-col justify-center items-center gap-2'
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+                        >
                             <img src={Laurel} alt="Ceo/Founder of Okike Plc" style={{ height: '30rem' }} />
                             <div>
                                 <h2 className='text-2xl font-bold text-orange-600'>Mrs Laurel</h2>
                                 <p className='text-xl text-zinc-200  font-light'>Lead Architect</p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
 

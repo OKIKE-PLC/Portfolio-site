@@ -43,17 +43,19 @@ export default function Contact() {
   };
 
   return (
-    <motion.section 
+    <section 
       className="mx-auto" 
       style={{ padding: "5.5rem 1rem" }}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
     >
       {/* main contact div */}
       <div className="flex flex-col md:flex-row justify-center items-start gap-5 marginAuto">
         {/* left div */}
-        <div className="flex flex-col justify-center items-start gap-5 text-left md:w-1/2">
+        <motion.div 
+          className="flex flex-col justify-center items-start gap-5 text-left md:w-1/2"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h1 className="text-orange-600 font-light text-xl lg:text-2xl">
             Get in Touch
           </h1>
@@ -63,24 +65,39 @@ export default function Contact() {
             structural monolith.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-start gap-4">
-            <div className="flex flex-col justify-center items-start gap-2">
+            <motion.div 
+              className="flex flex-col justify-center items-start gap-2"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+            >
               <CiLocationOn className="text-orange-600 font-bold text-3xl" />
               <div className="flex flex-col justify-center items-start gap-2">
                 <h3>Headquarters</h3>
                 <p>Industrial Zone 4, Architectural District Lagos, Nigeria</p>
               </div>
-            </div>
-            <div className="flex flex-col justify-center items-start gap-2">
+            </motion.div>
+            <motion.div 
+              className="flex flex-col justify-center items-start gap-2"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
+            >
               <MdOutlineEmail className="text-orange-600 font-bold text-3xl" />
               <div className="flex flex-col justify-center items-start gap-2">
                 <h3>Inquiries</h3>
                 <a href="mailto:okikestudio@okikeplc.com">okikestudio@okikeplc.com</a>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
         {/* right/contact div */}
-        <div className="flex flex-col justify-center items-start gap-5 text-left  w-full md:w-1/2 rounded-xl">
+        <motion.div 
+          className="flex flex-col justify-center items-start gap-5 text-left  w-full md:w-1/2 rounded-xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+        >
           <h3 className="text-orange-600 font-light text-xl lg:text-2xl">
             Project Brief
           </h3>
@@ -145,8 +162,8 @@ export default function Contact() {
               Submit
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
