@@ -1,41 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import bgImg2 from "../assets/Container.png";
-
-const projects = [
-  {
-    id: 1,
-    image: bgImg2,
-    category: "MARITIME INFRASTRUCTURE / 2023",
-    title: "Lagos Waterfront Pavilion",
-    size: "large", // 2x2 grid area
-    color: "bg-blue-900",
-  },
-  {
-    id: 2,
-    image: bgImg2,
-    category: "RESIDENTIAL FABRICATION / 2022",
-    title: "Federal Capital Residency",
-    size: "tall", // 1x2 grid area
-    color: "bg-stone-800",
-  },
-  {
-    id: 3,
-    image: bgImg2,
-    category: "RESTORATION & LEGACY / 2024",
-    title: "Heritage Conservation Initiative",
-    size: "wide", // 2x1 grid area
-    color: "bg-amber-900",
-  },
-  {
-    id: 4,
-    image: bgImg2,
-    category: "COMMERCIAL MOBILITY / 2024",
-    title: "Modern Office Complex",
-    size: "small", // 1x1 grid area
-    color: "bg-slate-800",
-  },
-];
+import projects from "../data/projects";
 
 export default function Portfolio() {
 
@@ -105,7 +70,7 @@ export default function Portfolio() {
                 className="transform transition-transform duration-700 ease-out delay-200 md:translate-y-8 md:group-hover:translate-y-0"
               >
                 <Link
-                  to="/portfolio/residential"
+                  to={`/portfolio/${project.slug}`}
                   className="inline-block text-white text-sm font-medium border-b-2 border-orange-500 pb-1 hover:text-orange-400 hover:border-orange-400 transition-colors"
                 >
                   View More
@@ -118,3 +83,4 @@ export default function Portfolio() {
     </section>
   );
 }
+

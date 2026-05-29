@@ -4,7 +4,7 @@ import Portfolio from './pages/portfolio';
 import About from './pages/about';
 import Process from './pages/process';
 import Contact from './pages/contact';
-import Residential from './pages/residential';
+import CaseStudy from './pages/CaseStudy';
 import './App.css';
 import Navbar from './components/navbar';
 import Footer from "./components/footer";
@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/process" element={<Process />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio/residential" element={<Residential />} />
+          <Route path="/portfolio/:slug" element={<CaseStudy />} />
           <Route path="/about/meet-the-team" element={<MeetTheTeam />} />
         </Routes>
       </main>
