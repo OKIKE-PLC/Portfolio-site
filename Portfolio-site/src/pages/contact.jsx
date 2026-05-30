@@ -73,7 +73,7 @@ export default function Contact() {
             >
               <CiLocationOn className="text-orange-600 font-bold text-3xl" />
               <div className="flex flex-col justify-center items-start gap-2">
-                <h3>Headquarters</h3>
+                <h3>Office</h3>
                 <p>Industrial Zone 4, Architectural District Lagos, Nigeria</p>
               </div>
             </motion.div>
@@ -86,7 +86,7 @@ export default function Contact() {
               <MdOutlineEmail className="text-orange-600 font-bold text-3xl" />
               <div className="flex flex-col justify-center items-start gap-2">
                 <h3>Inquiries</h3>
-                <a href="mailto:okikestudio@okikeplc.com">okikestudio@okikeplc.com</a>
+                <a href="mailto:okikestudio@okikeplc.com" className="hover:text-orange-600 transition-colors duration-200">okikestudio@okikeplc.com</a>
               </div>
             </motion.div>
           </div>

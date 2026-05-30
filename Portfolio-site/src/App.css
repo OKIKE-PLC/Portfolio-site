@@ -18,15 +18,15 @@ html {
   background: #0a0a08;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c4621a;
-  border-radius: 3px;
+  background: #EA580C;
+  border-radius: 10px;
 }
 ::selection {
   background: #EA580C; /* Change background color */
   color: #131313;      /* Change text color */
   border-radius: 2rem;
   padding: 2.5rem;
-  border: 1px solid #EA580C;
+  border: 1rem solid #EA580C;
 }
 
 

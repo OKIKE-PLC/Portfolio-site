@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
 import lightLogo from "../assets/(PLC)_Light-Logo.png";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -71,6 +72,18 @@ export default function Navbar() {
           About
         </NavLink>
         <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
+              isActive
+                ? "bg-orange-600 text-stone-100 font-medium"
+                : `hover:bg-orange-200 hover:text-orange-700 ${isScrolled ? "text-orange-600" : "text-stone-100"}`
+            }`
+          } style={{ padding: ".5rem 1rem" }}
+        >
+          Services
+        </NavLink>
+        <NavLink
           to="/portfolio"
           className={({ isActive }) =>
             `px-4 py-2 rounded-lg transition-all duration-300 ease-in-out ${
@@ -96,15 +109,7 @@ export default function Navbar() {
         </NavLink>
       </nav>
 
-      <a
-        href="https://wa.me/2349045942474?text=Hello%20I%20am%20interested%20in%20your%20services"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hidden md:block bg-orange-600 text-stone-100 rounded-lg hover:bg-orange-800 transition duration-300"
-        style={{ padding: ".5rem 1rem" }}
-      >
-        Contact Us
-      </a>
+      <WhatsAppButton className="hidden md:block bg-orange-600 text-stone-100 rounded-lg hover:bg-orange-800 transition duration-300" />
 
       {/* mobile navigation visible only on mobile */}
       <button
@@ -122,19 +127,20 @@ export default function Navbar() {
         }`}
       >
         <nav 
-          className="flex flex-col gap-4 items-center bg-stone-900 w-full sticky top-16 z-50" 
+          className="flex flex-col gap-4 items-center bg-stone-900 w-full sticky top-8 z-50" 
           style={{padding: "1rem"}}
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `px-6 py-3 w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
+              `w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
                 isActive
                   ? "bg-orange-600 text-stone-100 font-medium"
                   : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
               }`
             }
+            style={{ padding: ".5rem 1rem" }}
           >
             Home
           </NavLink>
@@ -147,8 +153,22 @@ export default function Navbar() {
                   : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
               }`
             }
+            style={{ padding: ".5rem 1rem" }}
           >
             About
+          </NavLink>
+          <NavLink
+            to="/services"
+            className={({ isActive }) =>
+              `px-6 py-3 w-full text-center rounded-lg transition-all duration-300 ease-in-out ${
+                isActive
+                  ? "bg-orange-600 text-stone-100 font-medium"
+                  : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
+              }`
+            }
+            style={{ padding: ".5rem 1rem" }}
+          >
+            Services
           </NavLink>
           <NavLink
             to="/portfolio"
@@ -159,6 +179,7 @@ export default function Navbar() {
                   : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
               }`
             }
+            style={{ padding: ".5rem 1rem" }}
           >
             Portfolio
           </NavLink>
@@ -171,6 +192,7 @@ export default function Navbar() {
                   : "text-orange-600 hover:bg-stone-800 hover:text-orange-500"
               }`
             } 
+            style={{ padding: ".5rem 1rem" }}
           >
             Contact
           </NavLink>

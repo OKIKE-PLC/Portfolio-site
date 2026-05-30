@@ -13,12 +13,13 @@ export default function Footer() {
             <a href="#"><img src={darkLogo} alt="Okike Logo" width={60} loading="lazy" /></a>
             <p>The Architectural Monolith. Engineering excellence and design precision in every structural detail.</p>
         </div>
-        <div className='flex flex-col gap-3 justify-start items-start'>
+         <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Explore</span>
             <div className='flex flex-col justify-start items-start gap-2 font-light'>
                 <Link to="/">Home</Link>
-                <Link to="/portfolio">Portfolio</Link>
                 <Link to="/about">About</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/portfolio">Portfolio</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to="/about/meet-the-team">Meet The Team</Link>
             </div>
@@ -27,12 +28,12 @@ export default function Footer() {
         <div className='flex flex-col gap-3 justify-start items-start'>
             <span className='text-orange-600'>Services</span>
             <div className='flex flex-col justify-start items-start gap-2 font-light'>
-                <a href="#">Interior Design</a>
-                <a href="#">3D and Architectural Design</a>
-                <a href="#">Painting</a>
-                <a href="#">Cleaning</a>
-                <a href="#">Building Construction and Project Management</a>
-                <a href="#">Fabrication</a>
+                <Link to="/services">Interior Design</Link>
+                <Link to="/services">3D and Architectural Design</Link>
+                <Link to="/services">Painting</Link>
+                <Link to="/services">Cleaning</Link>
+                <Link to="/services">Building Construction and Project Management</Link>
+                <Link to="/services">Fabrication</Link>
             </div>
         </div>
         {/* <div className='flex flex-col gap-3 justify-start items-start'>

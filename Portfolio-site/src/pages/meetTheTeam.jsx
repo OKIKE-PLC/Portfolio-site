@@ -47,7 +47,7 @@ export default function MeetTheTeam() {
                         >
                             <img src={Sha_sha} alt="Ceo/Founder of Okike Plc" style={{ height: '30rem' }} />
                             <div>
-                                <h2 className='text-2xl font-bold text-orange-600'>Mr Shalom</h2>
+                                <h2 className='text-2xl font-bold text-orange-600'>Mr Shalom Eze</h2> 
                                 <p className='text-xl  text-zinc-200  font-light'>Ceo/Founder</p>
                             </div>
                         </motion.div>

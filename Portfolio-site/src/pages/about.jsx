@@ -1,4 +1,5 @@
-import bgImg2 from "../assets/Container.png";
+// import bgImg2 from "../assets/Container.png";
+import rooftop from "../assets/rooftop-mural.JPG";
 import Sha_sha from "../assets/Sha-Sha.png";
 import Partner from "../components/partner";
 import { Link } from "react-router-dom";
@@ -13,13 +14,13 @@ export default function About() {
       {/* header section */}
       <motion.header
         className="hero flex flex-col justify-end items-start h-screen w-full bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${bgImg2}')`, padding: "3rem 1rem" }}
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${rooftop}')`, padding: "3rem 1rem" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
         <div
-          className="marginAuto flex flex-col justify-end items-start gap-2 z-10"
+          className="marginAuto flex flex-col justify-end items-start gap-2 z-10 w-full"
           style={{ padding: "0 0 3.5rem 0" }}
         >
           <p className="font-semibold text-orange-600 text-xl md:text-3xl">About Us</p>
