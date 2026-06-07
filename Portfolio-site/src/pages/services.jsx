@@ -4,14 +4,17 @@ import Partner from "../components/partner";
 import FabCards from "../components/fabricationCards";
 import WhatsAppButton from "../components/WhatsAppButton";
 
+
 // Import images
-import bgHero from "../assets/Container.png";
+// import bgHero from "../assets/Container.png";
 import architecturalPlanningImg from "../assets/architectural-planning.png";
 import interiorMillworkImg from "../assets/interior-millwork.png";
 import constructionSiteImg from "../assets/construction-site.png";
 import paintServicesImg from "../assets/paint-services.png";
 import cleaningServicesImg from "../assets/deep-cleaning.png";
 import visualizationImg from "../assets/3d-visualization.png";
+import SandStone2 from "../assets/Sandstone Apartment3.jpg"
+
 
 // Icons for each service
 import { LuCompass, LuWrench, LuBuilding, LuPaintbrush, LuSparkles, LuBox } from "react-icons/lu";
@@ -110,21 +113,33 @@ export default function Services() {
       <motion.header
         className="hero flex flex-col justify-end items-start h-screen w-full bg-cover bg-no-repeat bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('${bgHero}')`,
-          padding: "3rem 1rem",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('${SandStone2}')`,
+          padding: "1rem",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="marginAuto flex flex-col justify-end items-start gap-2 z-10 w-full" style={{ padding: "0 0 3.5rem 0" }}>
-          <p className="font-semibold text-orange-600 text-xl md:text-3xl tracking-wide">- OUR EXPERTISE</p>
-          <h1 className="font-bold text-zinc-100 text-4xl md:text-6xl leading-tight">
+        <div className="marginAuto flex flex-col justify-end items-start gap-2 z-10 w-full" style={{ padding: "0 0 1.5rem 0" }}>
+          <motion.p 
+          initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          className="font-semibold text-orange-600 text-xl md:text-3xl tracking-wide">- OUR EXPERTISE</motion.p>
+          <motion.h1
+          initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+          className="font-bold text-zinc-100 text-4xl md:text-6xl leading-tight">
             Systematic Services
-          </h1>
-          <p className="max-w-2xl font-medium text-zinc-300 text-base md:text-xl mt-2">
+          </motion.h1>
+          {/* <motion.p
+          initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          className="max-w-2xl font-medium text-zinc-300 text-base md:text-xl mt-2">
             A carefully integrated suite of architectural, fabrication, and construction capabilities executed with radical responsibility.
-          </p>
+          </motion.p> */}
         </div>
       </motion.header>
 
@@ -159,10 +174,10 @@ export default function Services() {
                 >
                   <img 
                     src={service.image} 
-                    alt={service.title} 
+                    alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C19] via-transparent to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-[#1C1C19] via-transparent to-transparent opacity-60"></div>
                   
                   {/* Floating ID badge */}
                   <div className="absolute top-6 left-6 bg-[#1C1C19] border border-orange-600/30 px-4 py-2 rounded-xl flex items-center gap-2" style={{padding: " 1rem 2rem"}}>
@@ -202,55 +217,6 @@ export default function Services() {
           })}
         </div>
       </section>
-
-      {/* Fabrication Process Section integrated */}
-      {/* <section className="w-full bg-[#151513] border-y border-zinc-900 py-24">
-        <div className="max-w-[1440px] mx-auto flex flex-col justify-center items-center px-4 md:px-8">
-          <motion.div 
-            className="flex flex-col items-center text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="text-orange-600 text-xs tracking-[0.3em] font-semibold mb-2 block uppercase">How We Work</span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">The Fabrication Process</h2>
-            <p className="max-w-2xl text-zinc-400 font-light text-sm md:text-base">
-              A comprehensive nine-step roadmap ensuring total alignment, legal clarity, and flawless engineering from first brief to long-term aftercare.
-            </p>
-          </motion.div>
-          <FabCards />
-        </div>
-      </section> */}
-
-      {/* Call to Action Section */}
-      {/* <section className="w-full py-24 px-4 relative flex flex-col items-center justify-center text-center">
-        <motion.div 
-          className="max-w-4xl flex flex-col items-center gap-6 z-10"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl md:text-5xl font-bold">Ready to Elevate Your Space?</h2>
-          <p className="max-w-xl text-zinc-400 font-light text-base md:text-lg">
-            Let's discuss how our design, visualization, and precision fabrication systems can turn your vision into permanent structural form.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-orange-600 text-stone-100 rounded-xl hover:bg-orange-700 transition duration-300 px-8 py-4 font-semibold text-center"
-            >
-              Start Your Project
-            </Link>
-            <WhatsAppButton 
-              text="Consult via WhatsApp"
-              className="rounded-xl bg-transparent text-orange-600 border-orange-600 border-2 hover:bg-orange-600 hover:text-stone-100 transition duration-300 px-8 py-4 font-semibold text-center"
-              style={{}}
-            />
-          </div>
-        </motion.div>
-      </section> */}
 
       <Partner />
     </section>

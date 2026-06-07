@@ -24,7 +24,7 @@ export default function Home() {
             {/* hero section */}
             <header className="hero flex flex-col justify-center items-start md:items-center h-screen bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${bgImg}')`, padding: "0 1rem" }}>
                 {/* hero text div */}
-            <motion.section className="content marginAuto flex  flex-col justify-center items-start md:items-center text-left  md:text-center"
+            <motion.section className="content marginAuto flex  flex-col justify-center items-start gap-10 md:items-center text-center  md:text-center"
                     initial={{ opacity: 0,
                                x: -100
                              }}
@@ -38,15 +38,15 @@ export default function Home() {
                         duration: 0.8
                             }}
                     >
-                        <p className="flex justify-center items-center text-orange-600 text-xl font-semibold sm:text-center before:content-[''] before:w-25 before:h-[5px] before:rounded-full before:bg-orange-600 before:mr-2 after:content-[''] after:w-25 after:h-[5px] after:rounded-full after:bg-orange-600 after:ml-2">Design . Build . Renovate</p>
+                        <p className="flex justify-center items-center text-orange-600 text-xl font-semibold sm:text-center  ">Interior Design . 3D Visualization . Construction</p>
                    
                 <motion.h1 
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }} 
                     transition={{ delay: 0.4, stiffness: 70,  damping: 20, duration: 0.8 }}
-                    className=' text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold font-chubbo  m-5'>Interior Design . 3D Visualization . Construction</motion.h1>
-                <p className="md:text-2xl max-w-sm md:max-w-3xl text-orange-600 italic">Turning Spaces into Stories
-                </p>
+                    className=' text-4xl md:text-6xl max-w-sm md:max-w-6xl  leading-10 md:leading-15 font-semibold font-chubbo  m-5'>Turning Spaces into Stories</motion.h1>
+                {/* <p className="md:text-2xl max-w-sm md:max-w-3xl text-orange-600 italic">Interior Design . 3D Visualization . Construction
+                </p> */}
 
                 {/* hero cta btns */}
                 <div className="cta flex flex-col md:flex-row justify-center w-full md:w-3/4 items-center gap-3">
@@ -57,12 +57,12 @@ export default function Home() {
                 </div>
                         {/* socials */}
            
-                <div className="socials w-full md:w-1/2 flex flex-row justify-between items-center gap-2" style={{padding: "1rem"}}>
+                {/* <div className="socials w-full md:w-1/2 flex flex-row justify-between items-center gap-2" style={{padding: "1rem"}}>
                     <a className='hover:text-orange-600 transition duration-150 text-2xl' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/okike-plc-8a27043b6"><FaLinkedinIn /></a>
                     <a className='hover:text-orange-600 transition duration-150 text-2xl' target='_blank' rel='noopener noreferrer' href="https://x.com/Okikeplc"><BsTwitterX /></a>
                     <a className='hover:text-orange-600 transition duration-150 text-2xl' target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/okikestudio"><FaInstagram /></a>
                     <a className='hover:text-orange-600 transition duration-150 text-2xl' target='_blank' rel='noopener noreferrer' href="https://www.facebook.com/share/1GsSgNwiPk/"><FaFacebookF /></a>
-                </div>
+                </div> */}
             </motion.section>
                     
             

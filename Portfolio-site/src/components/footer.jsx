@@ -4,11 +4,17 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import okike from "../assets/(PLC)_Light-Logo.png"
 
 export default function Footer() {
     return (
-        <footer className="bg-[#1C1C19] text-zinc-100" style={{padding: "3rem 1rem"}}>
-       <div className='grid grid-cols-1  md:grid-cols-4 md:grid-rows-3 lg:grid-cols-4 lg:grid-rows-1 gap-8 max-w-[1440px]' style={{margin: "0 auto"}}>
+        <footer className="relative bg-[#1C1C19] text-zinc-100 overflow-visible" style={{padding: "3rem 1rem"}}>
+            {/* Background Image with reduced opacity */}
+            <div 
+                className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-5 pointer-events-none" 
+                style={{ backgroundImage: `url('${okike}')` }}
+            />
+            <div className='relative z-10 grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 lg:grid-cols-4 lg:grid-rows-1 gap-8 max-w-[1440px]' style={{margin: "0 auto"}}>
          <div className='flex flex-col gap-3 justify-start items-start'>
             <a href="#"><img src={darkLogo} alt="Okike Logo" width={60} loading="lazy" /></a>
             <p>The Architectural Monolith. Engineering excellence and design precision in every structural detail.</p>

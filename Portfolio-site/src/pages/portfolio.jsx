@@ -55,7 +55,7 @@ export default function Portfolio() {
               style={{ padding: ".5rem" }}
             >
               <p
-                className="text-xs font-semibold tracking-wider text-orange-500 uppercase mb-2 transform transition-transform duration-700 ease-out md:translate-y-8 md:group-hover:translate-y-0"
+                className="text-xs font-semibold tracking-wider text-orange-600 uppercase mb-2 transform transition-transform duration-700 ease-out md:translate-y-8 md:group-hover:translate-y-0"
               >
                 {project.category}
               </p>
@@ -71,7 +71,7 @@ export default function Portfolio() {
               >
                 <Link
                   to={`/portfolio/${project.slug}`}
-                  className="inline-block text-white text-sm font-medium border-b-2 border-orange-500 pb-1 hover:text-orange-400 hover:border-orange-400 transition-colors"
+                  className="inline-block text-white text-sm font-medium border-b-2 border-orange-600 pb-1 hover:text-orange-600 hover:border-orange-600 transition-colors"
                 >
                   View More
                 </Link>

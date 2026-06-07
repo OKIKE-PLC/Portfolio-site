@@ -9,33 +9,41 @@ import { LuHouse, LuShieldCheck, LuSettings, LuPenTool } from "react-icons/lu";
 export default function About() {
   return (
     <section
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center "
     >
       {/* header section */}
       <motion.header
         className="hero flex flex-col justify-end items-start h-screen w-full bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${rooftop}')`, padding: "3rem 1rem" }}
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${rooftop}')`, padding: "1rem" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
         <div
           className="marginAuto flex flex-col justify-end items-start gap-2 z-10 w-full"
-          style={{ padding: "0 0 3.5rem 0" }}
+          style={{ padding: "0 0 1.5rem 0" }}
         >
-          <p className="font-semibold text-orange-600 text-xl md:text-3xl">About Us</p>
-          <h1 className="font-bold text-zinc-200 text-3xl md:text-5xl leading-tight">
+          <motion.p className="font-semibold text-orange-600 text-xl md:text-3xl"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >About Us</motion.p>
+          <motion.h1 className="font-bold text-[#F5F2ED] text-3xl md:text-5xl leading-tight"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+          >
             Fabrication Excellence
-          </h1>
+          </motion.h1>
         </div>
       </motion.header>
 
       
         {/* about us */}
-        <section
+        <section className="bg-[#F5F2ED] text-[#1C1C19]"
           style={{ padding: " 3.5rem 1rem " }}
         >
-          <div className="marginAuto flex flex-col md:flex-row justify-center items-start gap-2.5">
+          <div className=" flex flex-col md:flex-row justify-center items-start gap-2.5 ">
             <motion.div 
               className="w-full md:w-1/2 flex flex-col justify-center items-center"
               initial={{ opacity: 0, y: 40 }}
@@ -67,7 +75,7 @@ export default function About() {
               ABOUT US: THE PHILOSOPHY
             </h2>
             <div className="flex flex-col justify-between items-start gap-2">
-                <p className="text-xl font-light leading-relaxed">
+                <p className="text-xl text-[#1C1C19]  font-light leading-relaxed">
               We believe that design directly influences the way we think,
               live, and behave. A well designed space quietly organises life,
               shaping the way people move, interact, and experience their
@@ -76,7 +84,7 @@ export default function About() {
               within their spaces, guiding vision into form.
             </p>
             <p
-              className="text-xl font-light leading-relaxed"
+              className="text-xl text-[#1C1C19] font-light leading-relaxed"
               style={{ marginTop: " 1rem " }}
             >
               Through thoughtful collaborations with industry experts, we bring
@@ -92,7 +100,7 @@ export default function About() {
 
         {/* why choose us */}
         <section
-          className="w-full bg-[#1c1c19] text-zinc-200"
+          className="w-full bg-[#1c1c19] text-[#F5F2ED]"
         >
           <div className="marginAuto flex flex-col justify-left items-start gap-2.5 ">
               <motion.h2
@@ -116,10 +124,10 @@ export default function About() {
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <LuHouse className="w-6 h-6 stroke-[2.5]" />
-                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
+                  <h3 className="text-2xl text-orange-600 font-bold uppercase tracking-[0.2em]">
                     Design for Real Life:
                   </h3>
-                  <article className="text-xl text-zinc-500 font-light leading-snug">
+                  <article className="text-xl text-zinc-100 font-light leading-snug">
                     We believe spaces should support how people truly live and work.
                     Our designs consider movement, comfort, and daily habits to
                     create environments that feel natural and easy to use.
@@ -135,10 +143,10 @@ export default function About() {
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                 >
                   <LuShieldCheck className="w-6 h-6 stroke-[2.5]" />
-                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
+                  <h3 className="text-2xl text-orange-600 font-bold uppercase tracking-[0.2em]">
                     Radical Responsibility:
                   </h3>
-                  <article className="text-xl text-zinc-500 font-light leading-snug">
+                  <article className="text-xl text-zinc-100 font-light leading-snug">
                     We own the outcome. We believe responsibility is the ability to
                     own the result of an action, whether good or bad. We deliver
                     results
@@ -154,10 +162,10 @@ export default function About() {
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
                 >
                   <LuSettings className="w-6 h-6 stroke-[2.5]" />
-                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
+                  <h3 className="text-2xl text-orange-600 font-bold uppercase tracking-[0.2em]">
                     System-Driven Execution:
                   </h3>
-                  <article className="text-xl text-zinc-500 font-light leading-snug">
+                  <article className="text-xl text-zinc-100 font-light leading-snug">
                     We don't rely on "luck" or "bursts of energy". We rely on a
                     structured operational framework that ensures every nail and
                     every brushstroke is documented and verified.
@@ -173,10 +181,10 @@ export default function About() {
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
                 >
                   <LuPenTool className="w-6 h-6 stroke-[2.5]" />
-                  <h3 className="text-2xl font-bold uppercase tracking-[0.2em]">
+                  <h3 className="text-2xl text-orange-600 font-bold uppercase tracking-[0.2em]">
                     Integrity in Craft:
                   </h3>
-                  <article className="text-xl text-zinc-500 font-light leading-snug">
+                  <article className="text-xl text-zinc-100 font-light leading-snug">
                     We maintain a "Learning Loop". Our humility allows us to
                     consistently refine our craft, ensuring that our "Master" mind
                     always has control over the technical execution.

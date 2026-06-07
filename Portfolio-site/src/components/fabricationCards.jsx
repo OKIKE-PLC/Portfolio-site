@@ -98,7 +98,7 @@ export default function FabCards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-          className={`border border-zinc-800 ${card.background} md:w-[360px] w-full flex flex-col justify-start items-start rounded-xl hover:border-zinc-600 transition-colors duration-300`}
+          className={`border border-zinc-800 ${card.background} md:w-[360px] w-full flex flex-col justify-start items-start rounded-xl hover:border-orange-600 transition-colors duration-300`}
           style={{ padding: "2.5rem 2rem" }}
         >
           {/* Top Row: Small orange number and Large white number with icon */}
@@ -107,7 +107,7 @@ export default function FabCards() {
               0 {card.id}
             </span>
             <div className="relative flex items-center justify-center">
-              <span className="text-7xl opacity-5 font-chubbo font-light text-zinc-400 leading-none tracking-tighter">
+              <span className="text-7xl opacity-5 font-chubbo font-light text-orange-600 leading-none tracking-tighter">
                 0{card.id}
               </span>
               <div className="absolute  hover:text-orange-600 md:right-[-8px] right-[14px] bottom-[4px] text-zinc-300">
@@ -117,17 +117,17 @@ export default function FabCards() {
           </div>
 
           {/* Subtitle */}
-          <h5 className="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-semibold mb-3">
+          <h5 className="text-[10px] text-zinc-100 uppercase tracking-[0.2em] font-semibold mb-3">
             {card.subtitle}
           </h5>
 
           {/* Header */}
-          <h4 className="text-2xl font-bold text-white mb-4 leading-snug">
+          <h4 className="text-2xl font-bold text-orange-600 mb-4 leading-snug">
             {card.header}
           </h4>
 
           {/* Paragraph */}
-          <p className="text-zinc-400 font-light text-sm leading-relaxed">
+          <p className="text-zinc-100 font-light text-sm leading-relaxed">
             {card.text}
           </p>
         </motion.div>

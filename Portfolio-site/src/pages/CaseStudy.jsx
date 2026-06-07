@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import projects from "../data/projects";
 import "./hero.css";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 export default function CaseStudy() {
   const { slug } = useParams();
@@ -29,12 +30,22 @@ export default function CaseStudy() {
 
   return (
     <section
-      className="flex flex-col justify-center items-center"
+      className="relative  marginAuto flex flex-col justify-center items-center"
       style={{ padding: "0 .6rem" }}
     >
+      {/* Floating Back Button */}
+      <div className="absolute top-24 left-6 md:left-12 z-20">
+        <Link
+          to="/portfolio"
+          className="group flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-800 text-stone-100  rounded-full backdrop-blur-md transition-all duration-300 shadow-md" style={{padding: ".5rem"}}
+        >
+          <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1"><IoMdArrowRoundBack /></span>
+        </Link>
+      </div>
+
       {/* Hero header */}
       <motion.header
-        className="hero flex flex-col justify-end items-start h-screen w-screen bg-cover bg-no-repeat bg-center"
+        className="hero flex flex-col justify-end items-start h-dvh w-dvw  bg-cover bg-no-repeat bg-center "
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${project.heroImage}')`,
           padding: "0 1rem",
@@ -44,11 +55,24 @@ export default function CaseStudy() {
         transition={{ duration: 0.8 }}
       >
         <div
-          className="flex flex-col justify-end items-start gap-2 z-10"
-          style={{ padding: "7rem 0" }}
+          className="flex flex-col justify-end items-start gap-2 z-10 marginAuto w-full"
+          style={{ padding: "2rem 0" }}
         >
-          <p className="font-semibold text-orange-600 text-3xl">Case Study</p>
-          <h1 className="font-bold text-4xl md:text-5xl">{project.title}</h1>
+          <motion.p className="font-semibold text-orange-600 text-3xl "
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          >
+            Case Study
+          </motion.p>
+          <motion.h1
+            className="font-bold text-4xl md:text-5xl"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            {project.title}
+          </motion.h1>
         </div>
       </motion.header>
 
@@ -81,7 +105,7 @@ export default function CaseStudy() {
           >
             <img
               className="rounded-sm lg:rounded-xl w-full max-h-90 object-cover"
-              src={project.heroImage}
+              src={project.gallery[1]}
               alt={project.title}
             />
           </motion.div>
@@ -175,11 +199,27 @@ export default function CaseStudy() {
           >
             <img
               className="rounded-sm lg:rounded-xl w-full max-h-90 object-cover"
-              src={project.heroImage}
+              src={project.gallery[2]}
               alt={project.title}
             />
           </motion.div>
         </section>
+
+        {/* Back to Portfolio CTA */}
+        <motion.div 
+          className="flex justify-center items-center py-16 border-t border-stone-800/20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* <Link
+            to="/portfolio"
+            className="group flex items-center gap-2 px-8 py-3.5 bg-orange-600 hover:bg-orange-700 text-stone-100 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-orange-600/20 hover:-translate-y-0.5" style={{padding: ".5rem"}}
+          >
+            <span className="inline-block transition-transform duration-300 group-hover:-translate-x-1 "><IoMdArrowRoundBack /></span>
+          </Link> */}
+        </motion.div>
       </main>
     </section>
   );
